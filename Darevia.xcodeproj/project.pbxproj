@@ -16,6 +16,10 @@
 		DEDF43462B6A96410085B011 /* DareviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF43452B6A96410085B011 /* DareviaTests.swift */; };
 		DEDF43502B6A96410085B011 /* DareviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF434F2B6A96410085B011 /* DareviaUITests.swift */; };
 		DEDF43522B6A96410085B011 /* DareviaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF43512B6A96410085B011 /* DareviaUITestsLaunchTests.swift */; };
+		DEDF43652B6A9C020085B011 /* RoomTypeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF43632B6A9C020085B011 /* RoomTypeCVC.swift */; };
+		DEDF43662B6A9C020085B011 /* RoomTypeCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEDF43642B6A9C020085B011 /* RoomTypeCVC.xib */; };
+		DEDF43692B6A9C3E0085B011 /* RoomTypeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF43672B6A9C3E0085B011 /* RoomTypeTVC.swift */; };
+		DEDF436A2B6A9C3E0085B011 /* RoomTypeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEDF43682B6A9C3E0085B011 /* RoomTypeTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		DEDF434B2B6A96410085B011 /* DareviaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DareviaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDF434F2B6A96410085B011 /* DareviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DareviaUITests.swift; sourceTree = "<group>"; };
 		DEDF43512B6A96410085B011 /* DareviaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DareviaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DEDF43632B6A9C020085B011 /* RoomTypeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTypeCVC.swift; sourceTree = "<group>"; };
+		DEDF43642B6A9C020085B011 /* RoomTypeCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomTypeCVC.xib; sourceTree = "<group>"; };
+		DEDF43672B6A9C3E0085B011 /* RoomTypeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTypeTVC.swift; sourceTree = "<group>"; };
+		DEDF43682B6A9C3E0085B011 /* RoomTypeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomTypeTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +107,11 @@
 		DEDF432D2B6A963E0085B011 /* Darevia */ = {
 			isa = PBXGroup;
 			children = (
-				DEDF432E2B6A963E0085B011 /* AppDelegate.swift */,
-				DEDF43302B6A963E0085B011 /* SceneDelegate.swift */,
-				DEDF43322B6A963E0085B011 /* ViewController.swift */,
-				DEDF43342B6A963E0085B011 /* Main.storyboard */,
-				DEDF43372B6A96410085B011 /* Assets.xcassets */,
-				DEDF43392B6A96410085B011 /* LaunchScreen.storyboard */,
+				DEDF43602B6A99870085B011 /* Controllers */,
+				DEDF435F2B6A996A0085B011 /* Views */,
+				DEDF43622B6A9B9D0085B011 /* TableVC */,
+				DEDF43612B6A9A0F0085B011 /* CollectionVC */,
+				DEDF435E2B6A99440085B011 /* SystemFlie */,
 				DEDF433C2B6A96410085B011 /* Info.plist */,
 			);
 			path = Darevia;
@@ -125,6 +132,51 @@
 				DEDF43512B6A96410085B011 /* DareviaUITestsLaunchTests.swift */,
 			);
 			path = DareviaUITests;
+			sourceTree = "<group>";
+		};
+		DEDF435E2B6A99440085B011 /* SystemFlie */ = {
+			isa = PBXGroup;
+			children = (
+				DEDF432E2B6A963E0085B011 /* AppDelegate.swift */,
+				DEDF43302B6A963E0085B011 /* SceneDelegate.swift */,
+			);
+			path = SystemFlie;
+			sourceTree = "<group>";
+		};
+		DEDF435F2B6A996A0085B011 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DEDF43342B6A963E0085B011 /* Main.storyboard */,
+				DEDF43392B6A96410085B011 /* LaunchScreen.storyboard */,
+				DEDF43372B6A96410085B011 /* Assets.xcassets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DEDF43602B6A99870085B011 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DEDF43322B6A963E0085B011 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DEDF43612B6A9A0F0085B011 /* CollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+				DEDF43632B6A9C020085B011 /* RoomTypeCVC.swift */,
+				DEDF43642B6A9C020085B011 /* RoomTypeCVC.xib */,
+			);
+			path = CollectionVC;
+			sourceTree = "<group>";
+		};
+		DEDF43622B6A9B9D0085B011 /* TableVC */ = {
+			isa = PBXGroup;
+			children = (
+				DEDF43672B6A9C3E0085B011 /* RoomTypeTVC.swift */,
+				DEDF43682B6A9C3E0085B011 /* RoomTypeTVC.xib */,
+			);
+			path = TableVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +286,8 @@
 				DEDF433B2B6A96410085B011 /* LaunchScreen.storyboard in Resources */,
 				DEDF43382B6A96410085B011 /* Assets.xcassets in Resources */,
 				DEDF43362B6A963E0085B011 /* Main.storyboard in Resources */,
+				DEDF436A2B6A9C3E0085B011 /* RoomTypeTVC.xib in Resources */,
+				DEDF43662B6A9C020085B011 /* RoomTypeCVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +313,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEDF43332B6A963E0085B011 /* ViewController.swift in Sources */,
+				DEDF43692B6A9C3E0085B011 /* RoomTypeTVC.swift in Sources */,
 				DEDF432F2B6A963E0085B011 /* AppDelegate.swift in Sources */,
 				DEDF43312B6A963E0085B011 /* SceneDelegate.swift in Sources */,
+				DEDF43652B6A9C020085B011 /* RoomTypeCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

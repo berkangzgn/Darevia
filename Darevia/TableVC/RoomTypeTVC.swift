@@ -9,6 +9,11 @@ import UIKit
 
 class RoomTypeTVC: UITableViewCell {
 
+    static let  identifier = "RoomTypeTVC"
+    static func nib() -> UINib {
+        return UINib(nibName: "RoomTypeTVC", bundle: nil)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
