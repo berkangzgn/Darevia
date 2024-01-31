@@ -13,14 +13,13 @@ class RoomTypeCVC: UICollectionViewCell {
     @IBOutlet var roomTypeImg: UIImageView!
     @IBOutlet var roomTypeBGV: UIView!
     
+    var roomTypeMenu = [RoomTypeModel]()
+    
     static let  identifier = "RoomTypeCVC"
-    static func nib() -> UINib {
-        return UINib(nibName: "RoomTypeCVC", bundle: nil)
-    }
+    static func nib() -> UINib { return UINib(nibName: "RoomTypeCVC", bundle: nil) }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     public func configure(with model: RoomTypeModel) {
