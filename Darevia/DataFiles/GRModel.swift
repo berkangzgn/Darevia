@@ -58,11 +58,31 @@ class SharedData {
     var gameType: [GameType] = []
         
     private init() {
-        let gameType1 = GameType(gameTypeID: "1", gameTypeName: "Example 1", questions: ["Question1", "Question2", "Question3", "Question4", "Question5"], gameRoomColor: .systemYellow)
-        let gameType2 = GameType(gameTypeID: "2", gameTypeName: "Example 2", questions: ["Question1", "Question2", "Question3", "Question4", "Question5"], gameRoomColor: .systemPink)
-        let gameType3 = GameType(gameTypeID: "3", gameTypeName: "Example 3", questions: ["Question1", "Question2", "Question3", "Question4", "Question5"], gameRoomColor: .systemGreen)
-        let gameType4 = GameType(gameTypeID: "4", gameTypeName: "Example 4", questions: ["Question1", "Question2", "Question3", "Question4", "Question5"], gameRoomColor: .systemOrange)
-        let gameType5 = GameType(gameTypeID: "5", gameTypeName: "Example 5", questions: ["Question1", "Question2", "Question3", "Question4", "Question5"], gameRoomColor: .systemTeal)
+        let gameType1 = GameType(gameTypeID: "1", gameTypeName: "Example 1", questions: ["Question1", 
+                                                                                         "Question2",
+                                                                                         "Question3",
+                                                                                         "Question4",
+                                                                                         "Question5"], gameRoomColor: .systemYellow)
+        let gameType2 = GameType(gameTypeID: "2", gameTypeName: "Example 2", questions: ["Question1", 
+                                                                                         "Question2",
+                                                                                         "Question3",
+                                                                                         "Question4",
+                                                                                         "Question5"], gameRoomColor: .systemPink)
+        let gameType3 = GameType(gameTypeID: "3", gameTypeName: "Example 3", questions: ["Question1", 
+                                                                                         "Question2",
+                                                                                         "Question3",
+                                                                                         "Question4",
+                                                                                         "Question5"], gameRoomColor: .systemGreen)
+        let gameType4 = GameType(gameTypeID: "4", gameTypeName: "Example 4", questions: ["Question1", 
+                                                                                         "Question2",
+                                                                                         "Question3",
+                                                                                         "Question4",
+                                                                                         "Question5"], gameRoomColor: .systemOrange)
+        let gameType5 = GameType(gameTypeID: "5", gameTypeName: "Example 5", questions: ["Question1", 
+                                                                                         "Question2",
+                                                                                         "Question3",
+                                                                                         "Question4",
+                                                                                         "Question5"], gameRoomColor: .systemTeal)
         self.gameType = [gameType1, gameType2, gameType3, gameType4, gameType5]
     }
 }

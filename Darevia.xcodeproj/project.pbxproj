@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DE95AC582B6BCCF2001122B8 /* GRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95AC572B6BCCF2001122B8 /* GRModel.swift */; };
 		DEDF432F2B6A963E0085B011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF432E2B6A963E0085B011 /* AppDelegate.swift */; };
-		DEDF43312B6A963E0085B011 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF43302B6A963E0085B011 /* SceneDelegate.swift */; };
 		DEDF43332B6A963E0085B011 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF43322B6A963E0085B011 /* ViewController.swift */; };
 		DEDF43362B6A963E0085B011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDF43342B6A963E0085B011 /* Main.storyboard */; };
 		DEDF43382B6A96410085B011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDF43372B6A96410085B011 /* Assets.xcassets */; };
@@ -44,7 +43,6 @@
 		DE95AC572B6BCCF2001122B8 /* GRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRModel.swift; sourceTree = "<group>"; };
 		DEDF432B2B6A963E0085B011 /* Darevia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Darevia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDF432E2B6A963E0085B011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DEDF43302B6A963E0085B011 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DEDF43322B6A963E0085B011 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DEDF43352B6A963E0085B011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEDF43372B6A96410085B011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				DEDF432E2B6A963E0085B011 /* AppDelegate.swift */,
-				DEDF43302B6A963E0085B011 /* SceneDelegate.swift */,
 			);
 			path = SystemFlie;
 			sourceTree = "<group>";
@@ -327,7 +324,6 @@
 				DE95AC582B6BCCF2001122B8 /* GRModel.swift in Sources */,
 				DEDF43692B6A9C3E0085B011 /* RoomTypeTVC.swift in Sources */,
 				DEDF432F2B6A963E0085B011 /* AppDelegate.swift in Sources */,
-				DEDF43312B6A963E0085B011 /* SceneDelegate.swift in Sources */,
 				DEDF43652B6A9C020085B011 /* RoomTypeCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
