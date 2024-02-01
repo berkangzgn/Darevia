@@ -11,17 +11,9 @@ class ViewController: UIViewController {
 
     @IBOutlet var menuTV: UITableView!
     
-    var roomTypeModel = [RoomTypeModel]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setView()
-        
-        roomTypeModel.append(RoomTypeModel(typeName: "type1", bgColor: .systemYellow))
-        roomTypeModel.append(RoomTypeModel(typeName: "type2", bgColor: .systemPink))
-        roomTypeModel.append(RoomTypeModel(typeName: "type3", bgColor: .systemGreen))
-        roomTypeModel.append(RoomTypeModel(typeName: "type4", bgColor: .systemOrange))
-        roomTypeModel.append(RoomTypeModel(typeName: "type5", bgColor: .systemTeal))
     }
     
     private func setView() {
@@ -29,8 +21,6 @@ class ViewController: UIViewController {
         menuTV.delegate = self
         menuTV.dataSource = self
     }
-
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -40,7 +30,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = menuTV.dequeueReusableCell(withIdentifier: RoomTypeTVC.identifier, for: indexPath) as! RoomTypeTVC
-        cell.configure(with: roomTypeModel)
+        cell.configure(with: SharedData.shared.gameType)
         return cell
     }
     
@@ -50,17 +40,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             return 100.0
         }
-    }
-    
-    
-}
-
-struct RoomTypeModel {
-    let typeName: String
-    let bgColor: UIColor
-    
-    init(typeName: String, bgColor: UIColor) {
-        self.typeName = typeName
-        self.bgColor = bgColor
     }
 }

@@ -13,10 +13,10 @@ class RoomTypeTVC: UITableViewCell {
     
     static let  identifier = "RoomTypeTVC"
     static func nib() -> UINib { return UINib(nibName: "RoomTypeTVC", bundle: nil) }
-    var roomTypeMenu = [RoomTypeModel]()
+    var gameType = [GameType]()
     
-    func configure(with roomTypeMenu: [RoomTypeModel] ) {
-        self.roomTypeMenu = roomTypeMenu
+    func configure(with gameType: [GameType] ) {
+        self.gameType = gameType
         roomTypeCV.reloadData()
     }
     
@@ -39,12 +39,12 @@ class RoomTypeTVC: UITableViewCell {
 
 extension RoomTypeTVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return roomTypeMenu.count
+        return gameType.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = roomTypeCV.dequeueReusableCell(withReuseIdentifier: RoomTypeCVC.identifier, for: indexPath) as! RoomTypeCVC
-        cell.configure(with: roomTypeMenu[indexPath.row])
+        cell.configure(with: gameType[indexPath.row])
         return cell
     }
     

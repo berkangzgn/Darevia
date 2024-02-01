@@ -13,8 +13,6 @@ class RoomTypeCVC: UICollectionViewCell {
     @IBOutlet var roomTypeImg: UIImageView!
     @IBOutlet var roomTypeBGV: UIView!
     
-    var roomTypeMenu = [RoomTypeModel]()
-    
     static let  identifier = "RoomTypeCVC"
     static func nib() -> UINib { return UINib(nibName: "RoomTypeCVC", bundle: nil) }
     
@@ -22,9 +20,9 @@ class RoomTypeCVC: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    public func configure(with model: RoomTypeModel) {
-        self.roomTypeL.text = model.typeName
-        self.roomTypeBGV.backgroundColor = model.bgColor
+    public func configure(with model: GameType) {
+        self.roomTypeL.text = model.gameTypeName
+        self.roomTypeBGV.backgroundColor = model.gameRoomColor
     }
 
 }

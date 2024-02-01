@@ -1,5 +1,5 @@
 //
-//  Model.swift
+//  GRModel.swift
 //  Darevia
 //
 //  Created by Berkan Gezgin on 1.02.2024.
@@ -7,16 +7,6 @@
 
 import Foundation
 import UIKit
-
-struct RoomTypeModel {
-    let typeName: String
-    let bgColor: UIColor
-    
-    init(typeName: String, bgColor: UIColor) {
-        self.typeName = typeName
-        self.bgColor = bgColor
-    }
-}
 
 struct GameRoom {
     let roomID: String
@@ -59,5 +49,20 @@ struct GameType {
         self.gameTypeName = gameTypeName
         self.questions = questions
         self.gameRoomColor = gameRoomColor
+    }
+}
+
+
+class SharedData {
+    static let shared = SharedData()
+    var gameType: [GameType] = []
+        
+    private init() {
+        let gameType1 = GameType(gameTypeID: "1", gameTypeName: "Example 1", questions: ["Question1", "Question2", "Question3", "Question4", "Question5"], gameRoomColor: .systemYellow)
+        let gameType2 = GameType(gameTypeID: "2", gameTypeName: "Example 2", questions: ["Question1", "Question2", "Question3", "Question4", "Question5"], gameRoomColor: .systemPink)
+        let gameType3 = GameType(gameTypeID: "3", gameTypeName: "Example 3", questions: ["Question1", "Question2", "Question3", "Question4", "Question5"], gameRoomColor: .systemGreen)
+        let gameType4 = GameType(gameTypeID: "4", gameTypeName: "Example 4", questions: ["Question1", "Question2", "Question3", "Question4", "Question5"], gameRoomColor: .systemOrange)
+        let gameType5 = GameType(gameTypeID: "5", gameTypeName: "Example 5", questions: ["Question1", "Question2", "Question3", "Question4", "Question5"], gameRoomColor: .systemTeal)
+        self.gameType = [gameType1, gameType2, gameType3, gameType4, gameType5]
     }
 }
