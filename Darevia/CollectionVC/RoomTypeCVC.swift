@@ -24,6 +24,7 @@ class RoomTypeCVC: UICollectionViewCell {
         self.roomTypeL.text = model.gameTypeName
         self.roomTypeBGV.backgroundColor = model.gameRoomColor
         self.roomTypeBGV.applyCornerRadius()
+        self.roomTypeImg.tintColor = .appColor
     }
 
 }

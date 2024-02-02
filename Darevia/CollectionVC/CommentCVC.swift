@@ -24,6 +24,7 @@ class CommentCVC: UICollectionViewCell {
     public func configure(with model: Comments) {
         self.userName.text = model.commenterUser
         self.comment.text = model.commentText
+        self.userImg.tintColor = .appColor
     }
 
 }
