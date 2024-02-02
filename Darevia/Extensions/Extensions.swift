@@ -81,14 +81,18 @@ extension UIView {
     }
     
     func applyTopRoundedCorner() {
-        let maskPath = UIBezierPath(roundedRect: bounds,
-                                        byRoundingCorners: [.topLeft, .topRight],
-                                    cornerRadii: CGSize(width: 10.0, height: 10.0))
-
-        let maskLayer = CAShapeLayer()
-        maskLayer.frame = bounds
-        maskLayer.path = maskPath.cgPath
-        layer.mask = maskLayer
+        self.layer.cornerRadius = 10.0
+        self.layer.masksToBounds = true
+        self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+//        let maskPath = UIBezierPath(roundedRect: bounds,
+//                                        byRoundingCorners: [.topLeft, .topRight],
+//                                    cornerRadii: CGSize(width: 10.0, height: 10.0))
+//
+//        let maskLayer = CAShapeLayer()
+//        maskLayer.frame = bounds
+//        maskLayer.path = maskPath.cgPath
+//        layer.mask = maskLayer
     }
     
     // Add border

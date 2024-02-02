@@ -28,7 +28,7 @@ class RoomTypeTVC: UITableViewCell {
         roomTypeCV.delegate = self
         roomTypeCV.dataSource = self
         
-//        cellV.applyTopCornerRadius()
+        cellV.applyTopRoundedCorner()
         cellV.backgroundColor = .appWhite
     }
 
