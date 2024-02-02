@@ -11,6 +11,10 @@
 		DE95AC5B2B6C50AB001122B8 /* RoomActivateTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95AC592B6C50AB001122B8 /* RoomActivateTVC.swift */; };
 		DE95AC5C2B6C50AB001122B8 /* RoomActivateTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE95AC5A2B6C50AB001122B8 /* RoomActivateTVC.xib */; };
 		DE95AC5F2B6C56CB001122B8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95AC5E2B6C56CB001122B8 /* Extensions.swift */; };
+		DE95AC622B6D640C001122B8 /* CommentsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95AC602B6D640C001122B8 /* CommentsTVC.swift */; };
+		DE95AC632B6D640C001122B8 /* CommentsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE95AC612B6D640C001122B8 /* CommentsTVC.xib */; };
+		DE95AC662B6D677E001122B8 /* CommentCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95AC642B6D677E001122B8 /* CommentCVC.swift */; };
+		DE95AC672B6D677E001122B8 /* CommentCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE95AC652B6D677E001122B8 /* CommentCVC.xib */; };
 		DEDF432F2B6A963E0085B011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF432E2B6A963E0085B011 /* AppDelegate.swift */; };
 		DEDF43332B6A963E0085B011 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF43322B6A963E0085B011 /* ViewController.swift */; };
 		DEDF43362B6A963E0085B011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDF43342B6A963E0085B011 /* Main.storyboard */; };
@@ -47,6 +51,10 @@
 		DE95AC592B6C50AB001122B8 /* RoomActivateTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomActivateTVC.swift; sourceTree = "<group>"; };
 		DE95AC5A2B6C50AB001122B8 /* RoomActivateTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomActivateTVC.xib; sourceTree = "<group>"; };
 		DE95AC5E2B6C56CB001122B8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DE95AC602B6D640C001122B8 /* CommentsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTVC.swift; sourceTree = "<group>"; };
+		DE95AC612B6D640C001122B8 /* CommentsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTVC.xib; sourceTree = "<group>"; };
+		DE95AC642B6D677E001122B8 /* CommentCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCVC.swift; sourceTree = "<group>"; };
+		DE95AC652B6D677E001122B8 /* CommentCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCVC.xib; sourceTree = "<group>"; };
 		DEDF432B2B6A963E0085B011 /* Darevia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Darevia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDF432E2B6A963E0085B011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEDF43322B6A963E0085B011 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +197,8 @@
 			children = (
 				DEDF43632B6A9C020085B011 /* RoomTypeCVC.swift */,
 				DEDF43642B6A9C020085B011 /* RoomTypeCVC.xib */,
+				DE95AC642B6D677E001122B8 /* CommentCVC.swift */,
+				DE95AC652B6D677E001122B8 /* CommentCVC.xib */,
 			);
 			path = CollectionVC;
 			sourceTree = "<group>";
@@ -196,10 +206,12 @@
 		DEDF43622B6A9B9D0085B011 /* TableVC */ = {
 			isa = PBXGroup;
 			children = (
-				DEDF43672B6A9C3E0085B011 /* RoomTypeTVC.swift */,
-				DEDF43682B6A9C3E0085B011 /* RoomTypeTVC.xib */,
 				DE95AC592B6C50AB001122B8 /* RoomActivateTVC.swift */,
 				DE95AC5A2B6C50AB001122B8 /* RoomActivateTVC.xib */,
+				DEDF43672B6A9C3E0085B011 /* RoomTypeTVC.swift */,
+				DEDF43682B6A9C3E0085B011 /* RoomTypeTVC.xib */,
+				DE95AC602B6D640C001122B8 /* CommentsTVC.swift */,
+				DE95AC612B6D640C001122B8 /* CommentsTVC.xib */,
 			);
 			path = TableVC;
 			sourceTree = "<group>";
@@ -313,6 +325,8 @@
 				DEDF43382B6A96410085B011 /* Assets.xcassets in Resources */,
 				DEDF43362B6A963E0085B011 /* Main.storyboard in Resources */,
 				DEDF436A2B6A9C3E0085B011 /* RoomTypeTVC.xib in Resources */,
+				DE95AC632B6D640C001122B8 /* CommentsTVC.xib in Resources */,
+				DE95AC672B6D677E001122B8 /* CommentCVC.xib in Resources */,
 				DEDF43662B6A9C020085B011 /* RoomTypeCVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,11 +354,13 @@
 			files = (
 				DEDF43332B6A963E0085B011 /* ViewController.swift in Sources */,
 				DE95AC582B6BCCF2001122B8 /* GRModel.swift in Sources */,
+				DE95AC662B6D677E001122B8 /* CommentCVC.swift in Sources */,
 				DEDF43692B6A9C3E0085B011 /* RoomTypeTVC.swift in Sources */,
 				DEDF432F2B6A963E0085B011 /* AppDelegate.swift in Sources */,
 				DEDF43652B6A9C020085B011 /* RoomTypeCVC.swift in Sources */,
 				DE95AC5B2B6C50AB001122B8 /* RoomActivateTVC.swift in Sources */,
 				DE95AC5F2B6C56CB001122B8 /* Extensions.swift in Sources */,
+				DE95AC622B6D640C001122B8 /* CommentsTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

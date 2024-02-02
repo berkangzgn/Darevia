@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     private func setView() {
         menuTV.register(RoomTypeTVC.nib(), forCellReuseIdentifier: RoomTypeTVC.identifier)
         menuTV.register(RoomActivateTVC.nib(), forCellReuseIdentifier: RoomActivateTVC.identifier)
+        menuTV.register(CommentsTVC.nib(), forCellReuseIdentifier: CommentsTVC.identifier)
         
         menuTV.delegate = self
         menuTV.dataSource = self
@@ -41,8 +42,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.configure(with: SharedData.shared.gameType)
             return cell
         } else {
-            let cell = menuTV.dequeueReusableCell(withIdentifier: RoomTypeTVC.identifier, for: indexPath) as! RoomTypeTVC
-            cell.configure(with: SharedData.shared.gameType)
+            let cell = menuTV.dequeueReusableCell(withIdentifier: CommentsTVC.identifier, for: indexPath) as! CommentsTVC
+            cell.configure(with: SharedData.shared.comments)
             return cell
         }
     }

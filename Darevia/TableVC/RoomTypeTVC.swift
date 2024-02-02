@@ -29,7 +29,7 @@ class RoomTypeTVC: UITableViewCell {
         roomTypeCV.dataSource = self
         
         cellV.applyTopRoundedCorner()
-        cellV.backgroundColor = .appWhite
+        cellV.addBlurEffect(style: .systemChromeMaterial, alpha: 0.3)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -46,6 +46,7 @@ extension RoomTypeTVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = roomTypeCV.dequeueReusableCell(withReuseIdentifier: RoomTypeCVC.identifier, for: indexPath) as! RoomTypeCVC
         cell.configure(with: gameType[indexPath.row])
+        cell.applyCornerRadius()
         return cell
     }
     

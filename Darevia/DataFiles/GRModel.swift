@@ -52,10 +52,23 @@ struct GameType {
     }
 }
 
+struct Comments {
+    let commentID: String
+    let commenterUser: String
+    let commentText: String
+    
+    init(commentID: String, commenterUser: String, commentText: String) {
+        self.commentID = commentID
+        self.commenterUser = commenterUser
+        self.commentText = commentText
+    }
+}
+
 
 class SharedData {
     static let shared = SharedData()
     var gameType: [GameType] = []
+    var comments: [Comments] = []
         
     private init() {
         let gameType1 = GameType(gameTypeID: "1", gameTypeName: "Example 1", questions: ["Question1", 
@@ -84,5 +97,13 @@ class SharedData {
                                                                                          "Question4",
                                                                                          "Question5"], gameRoomColor: .systemTeal)
         self.gameType = [gameType1, gameType2, gameType3, gameType4, gameType5]
+        
+        let comment1 = Comments(commentID: "1", commenterUser: "TestUser1", commentText: "test comment 1")
+        let comment2 = Comments(commentID: "2", commenterUser: "TestUser1", commentText: "test comment 2")
+        let comment3 = Comments(commentID: "3", commenterUser: "TestUser1", commentText: "test comment 3")
+        let comment4 = Comments(commentID: "4", commenterUser: "TestUser1", commentText: "test comment 4")
+        let comment5 = Comments(commentID: "5", commenterUser: "TestUser1", commentText: "test comment 5")
+        
+        self.comments = [comment1, comment2, comment3, comment4, comment5]
     }
 }
