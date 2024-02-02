@@ -10,6 +10,7 @@ import UIKit
 class RoomTypeTVC: UITableViewCell {
 
     @IBOutlet var roomTypeCV: UICollectionView!
+    @IBOutlet weak var cellV: UIView!
     
     static let  identifier = "RoomTypeTVC"
     static func nib() -> UINib { return UINib(nibName: "RoomTypeTVC", bundle: nil) }
@@ -23,12 +24,12 @@ class RoomTypeTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        roomTypeCV.showsVerticalScrollIndicator = false
-//        roomTypeCV.showsHorizontalScrollIndicator = false
-        
         roomTypeCV.register(RoomTypeCVC.nib(), forCellWithReuseIdentifier: RoomTypeCVC.identifier)
         roomTypeCV.delegate = self
         roomTypeCV.dataSource = self
+        
+//        cellV.applyTopCornerRadius()
+        cellV.backgroundColor = .appWhite
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

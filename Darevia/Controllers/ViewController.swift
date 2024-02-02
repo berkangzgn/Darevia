@@ -18,8 +18,12 @@ class ViewController: UIViewController {
     
     private func setView() {
         menuTV.register(RoomTypeTVC.nib(), forCellReuseIdentifier: RoomTypeTVC.identifier)
+        menuTV.register(RoomActivateTVC.nib(), forCellReuseIdentifier: RoomActivateTVC.identifier)
+        
         menuTV.delegate = self
         menuTV.dataSource = self
+        
+        view.backgroundColor = .appColor
     }
 }
 
@@ -29,16 +33,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = menuTV.dequeueReusableCell(withIdentifier: RoomTypeTVC.identifier, for: indexPath) as! RoomTypeTVC
-        cell.configure(with: SharedData.shared.gameType)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 1 {
-            return 200.0
+        if indexPath.row == 0 {
+            let cell = menuTV.dequeueReusableCell(withIdentifier: RoomActivateTVC.identifier, for: indexPath) as! RoomActivateTVC
+            return cell
+        } else if indexPath.row == 1 {
+            let cell = menuTV.dequeueReusableCell(withIdentifier: RoomTypeTVC.identifier, for: indexPath) as! RoomTypeTVC
+            cell.configure(with: SharedData.shared.gameType)
+//            cell.applyCornerRadius()
+            return cell
         } else {
-            return 100.0
+            let cell = menuTV.dequeueReusableCell(withIdentifier: RoomTypeTVC.identifier, for: indexPath) as! RoomTypeTVC
+            cell.configure(with: SharedData.shared.gameType)
+            return cell
         }
     }
 }
