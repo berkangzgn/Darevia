@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Jbi-ig-dcq">
-                                <rect key="frame" x="10" y="20" width="355" height="105"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="105"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lvy-cB-8Sv">
                                     <size key="itemSize" width="128" height="128"/>
@@ -35,8 +35,8 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Jbi-ig-dcq" secondAttribute="bottom" constant="20" id="6QR-77-CkJ"/>
                             <constraint firstAttribute="width" secondItem="Zee-io-3Gc" secondAttribute="height" multiplier="75:29" id="DH3-9l-g5R"/>
-                            <constraint firstAttribute="trailing" secondItem="Jbi-ig-dcq" secondAttribute="trailing" constant="10" id="TT5-wx-GhJ"/>
-                            <constraint firstItem="Jbi-ig-dcq" firstAttribute="leading" secondItem="Zee-io-3Gc" secondAttribute="leading" constant="10" id="bxR-4M-8Vc"/>
+                            <constraint firstAttribute="trailing" secondItem="Jbi-ig-dcq" secondAttribute="trailing" id="TT5-wx-GhJ"/>
+                            <constraint firstItem="Jbi-ig-dcq" firstAttribute="leading" secondItem="Zee-io-3Gc" secondAttribute="leading" id="bxR-4M-8Vc"/>
                             <constraint firstItem="Jbi-ig-dcq" firstAttribute="top" secondItem="Zee-io-3Gc" secondAttribute="top" constant="20" id="r37-6f-u4y"/>
                         </constraints>
                     </view>

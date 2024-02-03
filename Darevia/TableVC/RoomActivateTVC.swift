@@ -14,6 +14,8 @@ class RoomActivateTVC: UITableViewCell {
     @IBOutlet weak var playNowL: UILabel!
     @IBOutlet weak var playNowBtn: UIButton!
     
+    @IBOutlet weak var enterGameBtn: UIButton!
+    @IBOutlet weak var enterGameImg: UIImageView!
     @IBOutlet weak var enterCodeV: UIView!
     @IBOutlet weak var enterCodeTF: UITextField!
     
@@ -37,7 +39,7 @@ class RoomActivateTVC: UITableViewCell {
         
         enterCodeV.applyCornerRadius()
         enterCodeV.backgroundColor = .appColor
-        enterCodeV.addBlurEffect(style: .systemChromeMaterial, alpha: 0.3)
+//        enterCodeV.addBlurEffect(style: .systemChromeMaterial, alpha: 0.3) 
         enterCodeV.addBorder(width: 2, color: .appWhite)
         
         enterCodeTF.placeholder = "Enter Code"
@@ -61,6 +63,4 @@ class RoomActivateTVC: UITableViewCell {
     @IBAction func playNowBtnClicked(_ sender: Any) {
         print("pressed")
     }
-    
-    
 }

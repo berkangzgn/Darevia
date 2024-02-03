@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="218"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JnZ-wQ-f6p">
-                                <rect key="frame" x="10" y="10" width="355" height="198"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="198"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qSK-gU-bU0">
                                     <size key="itemSize" width="280" height="120"/>
@@ -34,8 +34,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="JnZ-wQ-f6p" secondAttribute="bottom" constant="10" id="46h-uO-crb"/>
-                            <constraint firstItem="JnZ-wQ-f6p" firstAttribute="leading" secondItem="6dM-Wu-dpV" secondAttribute="leading" constant="10" id="HdC-FE-Jgs"/>
-                            <constraint firstAttribute="trailing" secondItem="JnZ-wQ-f6p" secondAttribute="trailing" constant="10" id="QGP-Ur-YhN"/>
+                            <constraint firstItem="JnZ-wQ-f6p" firstAttribute="leading" secondItem="6dM-Wu-dpV" secondAttribute="leading" id="HdC-FE-Jgs"/>
+                            <constraint firstAttribute="trailing" secondItem="JnZ-wQ-f6p" secondAttribute="trailing" id="QGP-Ur-YhN"/>
                             <constraint firstItem="JnZ-wQ-f6p" firstAttribute="top" secondItem="6dM-Wu-dpV" secondAttribute="top" constant="10" id="oPi-kT-rvh"/>
                             <constraint firstAttribute="width" secondItem="6dM-Wu-dpV" secondAttribute="height" multiplier="375:218" id="rVT-dn-npP"/>
                         </constraints>

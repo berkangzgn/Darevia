@@ -26,6 +26,15 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .appColor
     }
+    
+    @objc private func playNowButtonTapped() {
+        print("Play Now button tapped in ViewController")
+    }
+    
+//    @objc func playNowButtonTapped(_ sender: UIButton) {
+//        // Düğmeye tıklandığında çağrılacak kodları buraya ekleyin
+//        print("Play Now button tapped in ViewController")
+//    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -36,15 +45,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = menuTV.dequeueReusableCell(withIdentifier: RoomActivateTVC.identifier, for: indexPath) as! RoomActivateTVC
+            cell.playNowBtn.addTarget(self, action: #selector(playNowButtonTapped), for: .touchUpInside)
+            cell.enterGameBtn.addTarget(self, action: #selector(playNowButtonTapped), for: .touchUpInside)
             return cell
+            
         } else if indexPath.row == 1 {
             let cell = menuTV.dequeueReusableCell(withIdentifier: RoomTypeTVC.identifier, for: indexPath) as! RoomTypeTVC
             cell.configure(with: SharedData.shared.gameType)
             return cell
+            
         } else {
             let cell = menuTV.dequeueReusableCell(withIdentifier: CommentsTVC.identifier, for: indexPath) as! CommentsTVC
             cell.configure(with: SharedData.shared.comments)
             return cell
+            
         }
     }
 }
