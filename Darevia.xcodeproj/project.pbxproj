@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE7403E42B6F0E1B00C84DE5 /* GameTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7403E32B6F0E1B00C84DE5 /* GameTypeViewController.swift */; };
+		DE7403E72B6F10BA00C84DE5 /* GamesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7403E52B6F10BA00C84DE5 /* GamesCVC.swift */; };
+		DE7403E82B6F10BA00C84DE5 /* GamesCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE7403E62B6F10BA00C84DE5 /* GamesCVC.xib */; };
 		DE95AC582B6BCCF2001122B8 /* GRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95AC572B6BCCF2001122B8 /* GRModel.swift */; };
 		DE95AC5B2B6C50AB001122B8 /* RoomActivateTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95AC592B6C50AB001122B8 /* RoomActivateTVC.swift */; };
 		DE95AC5C2B6C50AB001122B8 /* RoomActivateTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE95AC5A2B6C50AB001122B8 /* RoomActivateTVC.xib */; };
@@ -47,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE7403E32B6F0E1B00C84DE5 /* GameTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeViewController.swift; sourceTree = "<group>"; };
+		DE7403E52B6F10BA00C84DE5 /* GamesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCVC.swift; sourceTree = "<group>"; };
+		DE7403E62B6F10BA00C84DE5 /* GamesCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesCVC.xib; sourceTree = "<group>"; };
 		DE95AC572B6BCCF2001122B8 /* GRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRModel.swift; sourceTree = "<group>"; };
 		DE95AC592B6C50AB001122B8 /* RoomActivateTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomActivateTVC.swift; sourceTree = "<group>"; };
 		DE95AC5A2B6C50AB001122B8 /* RoomActivateTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomActivateTVC.xib; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				DEDF43322B6A963E0085B011 /* ViewController.swift */,
+				DE7403E32B6F0E1B00C84DE5 /* GameTypeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +206,8 @@
 				DEDF43642B6A9C020085B011 /* RoomTypeCVC.xib */,
 				DE95AC642B6D677E001122B8 /* CommentCVC.swift */,
 				DE95AC652B6D677E001122B8 /* CommentCVC.xib */,
+				DE7403E52B6F10BA00C84DE5 /* GamesCVC.swift */,
+				DE7403E62B6F10BA00C84DE5 /* GamesCVC.xib */,
 			);
 			path = CollectionVC;
 			sourceTree = "<group>";
@@ -322,6 +331,7 @@
 			files = (
 				DEDF433B2B6A96410085B011 /* LaunchScreen.storyboard in Resources */,
 				DE95AC5C2B6C50AB001122B8 /* RoomActivateTVC.xib in Resources */,
+				DE7403E82B6F10BA00C84DE5 /* GamesCVC.xib in Resources */,
 				DEDF43382B6A96410085B011 /* Assets.xcassets in Resources */,
 				DEDF43362B6A963E0085B011 /* Main.storyboard in Resources */,
 				DEDF436A2B6A9C3E0085B011 /* RoomTypeTVC.xib in Resources */,
@@ -356,7 +366,9 @@
 				DE95AC582B6BCCF2001122B8 /* GRModel.swift in Sources */,
 				DE95AC662B6D677E001122B8 /* CommentCVC.swift in Sources */,
 				DEDF43692B6A9C3E0085B011 /* RoomTypeTVC.swift in Sources */,
+				DE7403E42B6F0E1B00C84DE5 /* GameTypeViewController.swift in Sources */,
 				DEDF432F2B6A963E0085B011 /* AppDelegate.swift in Sources */,
+				DE7403E72B6F10BA00C84DE5 /* GamesCVC.swift in Sources */,
 				DEDF43652B6A9C020085B011 /* RoomTypeCVC.swift in Sources */,
 				DE95AC5B2B6C50AB001122B8 /* RoomActivateTVC.swift in Sources */,
 				DE95AC5F2B6C56CB001122B8 /* Extensions.swift in Sources */,

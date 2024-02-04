@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     }
     
     @objc private func playNowButtonClicked() {
+        present(GameTypeViewController(), animated: true)
         print("Play Now button tapped in ViewController")
     }
 }

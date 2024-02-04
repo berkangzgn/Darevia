@@ -71,6 +71,7 @@ extension UIColor {
     static let appColor = UIColor(red: 235/255, green: 68/255, blue: 90/255, alpha: 1)
     static let appBluredColor = UIColor(red: 223/255, green: 126/255, blue: 136/255, alpha: 1)
     static let appWhite = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+    static let appDark = UIColor(red: 34/255, green: 9/255, blue: 13/255, alpha: 1)
 }
 
 extension UIView {
