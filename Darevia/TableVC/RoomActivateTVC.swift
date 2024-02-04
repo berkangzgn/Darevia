@@ -9,6 +9,8 @@ import UIKit
 
 class RoomActivateTVC: UITableViewCell {
 
+    @IBOutlet weak var cellV: UIView!
+    
     @IBOutlet weak var playNowV: UIView!
     @IBOutlet weak var playNowImg: UIImageView!
     @IBOutlet weak var playNowL: UILabel!
@@ -29,6 +31,9 @@ class RoomActivateTVC: UITableViewCell {
     }
 
     private func setView() {
+        cellV.backgroundColor = .appBluredColor
+        cellV.applyCornerRadius()
+        
         playNowImg.tintColor = .appColor
         
         playNowV.applyCornerRadius()
@@ -39,8 +44,9 @@ class RoomActivateTVC: UITableViewCell {
         
         enterCodeV.applyCornerRadius()
         enterCodeV.backgroundColor = .appColor
-//        enterCodeV.addBlurEffect(style: .systemChromeMaterial, alpha: 0.3) 
         enterCodeV.addBorder(width: 2, color: .appWhite)
+        
+        enterGameBtn.tintColor = .appColor
         
         enterCodeTF.placeholder = "Enter Code"
         enterCodeTF.setPlaceholderColor(.appWhite)
@@ -52,15 +58,9 @@ class RoomActivateTVC: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     @objc func doneButtonTapped() {
         enterCodeTF.resignFirstResponder()
-    }
-    
-    @IBAction func playNowBtnClicked(_ sender: Any) {
-        print("pressed")
     }
 }

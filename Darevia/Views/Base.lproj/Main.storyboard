@@ -29,13 +29,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OgV-Xv-SVh" secondAttribute="bottom" id="8QQ-O1-2cW"/>
                             <constraint firstItem="idV-fY-zeb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dub-c8-SSh"/>
                             <constraint firstItem="idV-fY-zeb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FeW-yU-Z0I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OgV-Xv-SVh" secondAttribute="trailing" id="GoL-24-kBa"/>
                             <constraint firstItem="OgV-Xv-SVh" firstAttribute="top" secondItem="idV-fY-zeb" secondAttribute="bottom" id="NQr-s3-JyS"/>
                             <constraint firstItem="idV-fY-zeb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="YQv-V5-LSH"/>
                             <constraint firstItem="OgV-Xv-SVh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="exW-XN-fA7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OgV-Xv-SVh" secondAttribute="bottom" id="hlW-cO-aFr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="idV-fY-zeb" secondAttribute="trailing" id="trv-wS-sWR"/>
                         </constraints>
                     </view>

@@ -25,9 +25,6 @@ class CommentsTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cellV.applyBottomRoundedCorner()
-        cellV.addBlurEffect(style: .systemChromeMaterial, alpha: 0.3)
-        
         commentCV.register(CommentCVC.nib(), forCellWithReuseIdentifier: CommentCVC.identifier)
         commentCV.delegate = self
         commentCV.dataSource = self

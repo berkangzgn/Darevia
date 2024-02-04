@@ -69,6 +69,7 @@ extension UITextField: UITextFieldDelegate {
 
 extension UIColor {
     static let appColor = UIColor(red: 235/255, green: 68/255, blue: 90/255, alpha: 1)
+    static let appBluredColor = UIColor(red: 223/255, green: 126/255, blue: 136/255, alpha: 1)
     static let appWhite = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
 }
 
@@ -78,18 +79,6 @@ extension UIView {
         self.layer.cornerRadius = 10.0
         self.layer.masksToBounds = true
         self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-    }
-    
-    func applyTopRoundedCorner() {
-        self.layer.cornerRadius = 10.0
-        self.layer.masksToBounds = true
-        self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-    }
-    
-    func applyBottomRoundedCorner() {
-        self.layer.cornerRadius = 10.0
-        self.layer.masksToBounds = true
-        self.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
     
     // Add border

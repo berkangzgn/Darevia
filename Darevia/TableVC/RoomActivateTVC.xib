@@ -44,9 +44,6 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
-                                        <connections>
-                                            <action selector="playNowBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OXq-8A-7d2"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -140,6 +137,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="cellV" destination="BDM-Uh-pC7" id="7JE-P9-ec4"/>
                 <outlet property="enterCodeTF" destination="duK-3f-C9Q" id="6Z8-nI-7yA"/>
                 <outlet property="enterCodeV" destination="wJi-dN-6Ds" id="1Nb-pK-Upg"/>
                 <outlet property="enterGameBtn" destination="mng-Yn-Oqg" id="QYh-SL-jHv"/>

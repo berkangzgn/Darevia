@@ -27,9 +27,6 @@ class RoomTypeTVC: UITableViewCell {
         roomTypeCV.register(RoomTypeCVC.nib(), forCellWithReuseIdentifier: RoomTypeCVC.identifier)
         roomTypeCV.delegate = self
         roomTypeCV.dataSource = self
-        
-        cellV.applyTopRoundedCorner()
-        cellV.addBlurEffect(style: .systemChromeMaterial, alpha: 0.3)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

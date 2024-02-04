@@ -27,14 +27,13 @@ class ViewController: UIViewController {
         view.backgroundColor = .appColor
     }
     
-    @objc private func playNowButtonTapped() {
-        print("Play Now button tapped in ViewController")
+    @objc private func enterCodeButtonClicked() {
+        print("Enter Game button tapped in ViewController")
     }
     
-//    @objc func playNowButtonTapped(_ sender: UIButton) {
-//        // Düğmeye tıklandığında çağrılacak kodları buraya ekleyin
-//        print("Play Now button tapped in ViewController")
-//    }
+    @objc private func playNowButtonClicked() {
+        print("Play Now button tapped in ViewController")
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -45,8 +44,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = menuTV.dequeueReusableCell(withIdentifier: RoomActivateTVC.identifier, for: indexPath) as! RoomActivateTVC
-            cell.playNowBtn.addTarget(self, action: #selector(playNowButtonTapped), for: .touchUpInside)
-            cell.enterGameBtn.addTarget(self, action: #selector(playNowButtonTapped), for: .touchUpInside)
+            cell.playNowBtn.addTarget(self, action: #selector(playNowButtonClicked), for: .touchUpInside)
+            cell.enterGameBtn.addTarget(self, action: #selector(enterCodeButtonClicked), for: .touchUpInside)
             return cell
             
         } else if indexPath.row == 1 {
