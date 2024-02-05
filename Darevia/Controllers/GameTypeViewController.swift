@@ -12,22 +12,12 @@ class GameTypeViewController: UIViewController {
     @IBOutlet weak var upperV: UIView!
     @IBOutlet weak var gamesCV: UICollectionView!
     
-    var gameType = [GameType]()
-    
-    func configure(with gameType: [GameType] ) {
-        self.gameType = SharedData.shared.gameType
-        gamesCV.reloadData()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setView()
     }
     
     private func setView() {
-        self.gameType = SharedData.shared.gameType
-        gamesCV.reloadData() //TODO: nil deger hatasi veriyor
-        
         view.backgroundColor = .appDark
         
         gamesCV.register(GamesCVC.nib(), forCellWithReuseIdentifier: GamesCVC.identifier)

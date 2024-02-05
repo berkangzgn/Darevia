@@ -9,21 +9,22 @@ import UIKit
 
 class GameDetailViewController: UIViewController {
 
+    @IBOutlet weak var topV: UIView!
+    @IBOutlet weak var collectionV: UIView!
+    @IBOutlet weak var detailCV: UICollectionView!
+    @IBOutlet weak var detailV: UIView!
+    @IBOutlet weak var detailImg: UIImageView!
+    @IBOutlet weak var titleL: UILabel!
+    @IBOutlet weak var detailL: UILabel!
+    @IBOutlet weak var detailTV: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.setTitle()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setTitle() {
+        
     }
-    */
-
 }
