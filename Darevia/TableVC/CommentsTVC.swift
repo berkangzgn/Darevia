@@ -9,6 +9,7 @@ import UIKit
 
 class CommentsTVC: UITableViewCell {
 
+    @IBOutlet weak var cellTitleL: UILabel!
     @IBOutlet var commentCV: UICollectionView!
     @IBOutlet weak var cellV: UIView!
     
@@ -25,6 +26,7 @@ class CommentsTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        cellTitleL.text = "example title"
         commentCV.register(CommentCVC.nib(), forCellWithReuseIdentifier: CommentCVC.identifier)
         commentCV.delegate = self
         commentCV.dataSource = self

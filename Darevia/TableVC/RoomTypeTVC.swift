@@ -9,6 +9,7 @@ import UIKit
 
 class RoomTypeTVC: UITableViewCell {
 
+    @IBOutlet weak var cellTitleL: UILabel!
     @IBOutlet var roomTypeCV: UICollectionView!
     @IBOutlet weak var cellV: UIView!
     
@@ -24,6 +25,7 @@ class RoomTypeTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        cellTitleL.text = "example title"
         roomTypeCV.register(RoomTypeCVC.nib(), forCellWithReuseIdentifier: RoomTypeCVC.identifier)
         roomTypeCV.delegate = self
         roomTypeCV.dataSource = self

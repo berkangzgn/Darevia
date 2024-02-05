@@ -20,8 +20,17 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dM-Wu-dpV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="218"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWA-lG-Uid">
+                                <rect key="frame" x="8" y="8" width="359" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PWA-lG-Uid" secondAttribute="height" multiplier="359:33" id="oZ9-r6-oWy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JnZ-wQ-f6p">
-                                <rect key="frame" x="0.0" y="10" width="375" height="198"/>
+                                <rect key="frame" x="0.0" y="49" width="375" height="159"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qSK-gU-bU0">
                                     <size key="itemSize" width="280" height="120"/>
@@ -36,8 +45,11 @@
                             <constraint firstAttribute="bottom" secondItem="JnZ-wQ-f6p" secondAttribute="bottom" constant="10" id="46h-uO-crb"/>
                             <constraint firstItem="JnZ-wQ-f6p" firstAttribute="leading" secondItem="6dM-Wu-dpV" secondAttribute="leading" id="HdC-FE-Jgs"/>
                             <constraint firstAttribute="trailing" secondItem="JnZ-wQ-f6p" secondAttribute="trailing" id="QGP-Ur-YhN"/>
-                            <constraint firstItem="JnZ-wQ-f6p" firstAttribute="top" secondItem="6dM-Wu-dpV" secondAttribute="top" constant="10" id="oPi-kT-rvh"/>
+                            <constraint firstAttribute="trailing" secondItem="PWA-lG-Uid" secondAttribute="trailing" constant="8" id="SGR-4l-YRb"/>
+                            <constraint firstItem="PWA-lG-Uid" firstAttribute="top" secondItem="6dM-Wu-dpV" secondAttribute="top" constant="8" id="Z3a-M4-5vJ"/>
+                            <constraint firstItem="PWA-lG-Uid" firstAttribute="leading" secondItem="6dM-Wu-dpV" secondAttribute="leading" constant="8" id="c51-Hp-Gla"/>
                             <constraint firstAttribute="width" secondItem="6dM-Wu-dpV" secondAttribute="height" multiplier="375:218" id="rVT-dn-npP"/>
+                            <constraint firstItem="JnZ-wQ-f6p" firstAttribute="top" secondItem="PWA-lG-Uid" secondAttribute="bottom" constant="8" id="y8r-1Q-YBh"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -51,6 +63,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="cellTitleL" destination="PWA-lG-Uid" id="uOs-B0-KkT"/>
                 <outlet property="cellV" destination="6dM-Wu-dpV" id="Y8q-Dj-MqP"/>
                 <outlet property="commentCV" destination="JnZ-wQ-f6p" id="aNz-ag-dFJ"/>
             </connections>
