@@ -82,6 +82,12 @@ extension UIView {
         self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
     }
     
+    func applyTopCornerRadius() {
+        self.layer.cornerRadius = 10.0
+        self.layer.masksToBounds = true
+        self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+    
     // Add border
     func addBorder(width: CGFloat, color: UIColor) {
         layer.borderWidth = width
