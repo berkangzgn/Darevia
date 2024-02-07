@@ -17,6 +17,8 @@ class GameDetailViewController: UIViewController {
     @IBOutlet weak var titleL: UILabel!
     @IBOutlet weak var detailL: UILabel!
     @IBOutlet weak var detailTV: UITextView!
+    @IBOutlet weak var createGameBtnV: UIView!
+    @IBOutlet weak var createGameBtn: UIButton!
     
     var gameTypeID: Int = 0
     
@@ -31,7 +33,7 @@ class GameDetailViewController: UIViewController {
         detailV.backgroundColor = .appWhite
         
         titleL.text = SharedData.shared.gameType[gameTypeID].gameTypeName
-        detailL.text = "asd aasdasd asdad"
+        detailL.text = "Game details"
 //        detailTV.text = SharedData.shared.gameType[gameTypeID].gameDesc // TODO: gameDesc eklenecek
         
         collectionV.backgroundColor = SharedData.shared.gameType[gameTypeID].gameRoomColor
@@ -39,7 +41,19 @@ class GameDetailViewController: UIViewController {
         detailCV.register(DetailCVC.nib(), forCellWithReuseIdentifier: DetailCVC.identifier)
         detailCV.delegate = self
         detailCV.dataSource = self
+        
+        createGameBtnV.backgroundColor = .appColor
+        createGameBtnV.applyCornerRadius()
+        
+        createGameBtn.setTitle("Create Game", for: .normal) // TODO: Lang change
+        createGameBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+        createGameBtn.setTitleColor(.appWhite, for: .normal)
     }
+    
+    @IBAction func createGameClicked(_ sender: Any) {
+        // TODO: gamers waiting room yonlenme
+    }
+    
 }
 
 extension GameDetailViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -52,5 +66,11 @@ extension GameDetailViewController: UICollectionViewDataSource, UICollectionView
         let cell = detailCV.dequeueReusableCell(withReuseIdentifier: DetailCVC.identifier, for: indexPath) as! DetailCVC
         cell.detailL.text = SharedData.shared.gameType[gameTypeID].questions![indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellWidth = (collectionView.bounds.width - 10 * 3) / 2
+        let cellHeight: CGFloat = 205
+        return CGSize(width: cellWidth, height: cellHeight)
     }
 }

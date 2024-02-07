@@ -35,9 +35,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oS-Lu-7Au">
-                                <rect key="frame" x="15" y="58" width="240" height="37"/>
+                                <rect key="frame" x="15" y="53" width="240" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -47,7 +47,7 @@
                             <constraint firstItem="P6S-BR-jtF" firstAttribute="leading" secondItem="kUQ-54-9ex" secondAttribute="trailing" constant="10" id="5ZX-7Y-8SG"/>
                             <constraint firstItem="kUQ-54-9ex" firstAttribute="leading" secondItem="ks1-d4-BZb" secondAttribute="leading" constant="15" id="7BB-4G-ARv"/>
                             <constraint firstItem="kUQ-54-9ex" firstAttribute="height" secondItem="ks1-d4-BZb" secondAttribute="height" multiplier="0.3" id="7aV-o2-WnO"/>
-                            <constraint firstAttribute="bottom" secondItem="4oS-Lu-7Au" secondAttribute="bottom" constant="15" id="I20-Xs-1eZ"/>
+                            <constraint firstAttribute="bottom" secondItem="4oS-Lu-7Au" secondAttribute="bottom" constant="5" id="I20-Xs-1eZ"/>
                             <constraint firstAttribute="trailing" secondItem="4oS-Lu-7Au" secondAttribute="trailing" constant="15" id="LlK-gx-pVM"/>
                             <constraint firstAttribute="trailing" secondItem="P6S-BR-jtF" secondAttribute="trailing" constant="20" id="U0M-kC-jn8"/>
                             <constraint firstAttribute="width" secondItem="ks1-d4-BZb" secondAttribute="height" multiplier="27:11" id="fJ7-Mn-XHY"/>
@@ -55,7 +55,7 @@
                             <constraint firstItem="kUQ-54-9ex" firstAttribute="top" secondItem="ks1-d4-BZb" secondAttribute="top" constant="15" id="hvP-KS-i5d"/>
                             <constraint firstItem="4oS-Lu-7Au" firstAttribute="leading" secondItem="kUQ-54-9ex" secondAttribute="leading" id="ift-Tz-uix"/>
                             <constraint firstItem="P6S-BR-jtF" firstAttribute="height" secondItem="kUQ-54-9ex" secondAttribute="height" id="okZ-ff-emE"/>
-                            <constraint firstItem="4oS-Lu-7Au" firstAttribute="top" secondItem="kUQ-54-9ex" secondAttribute="bottom" constant="10" id="pCi-Kz-051"/>
+                            <constraint firstItem="4oS-Lu-7Au" firstAttribute="top" secondItem="kUQ-54-9ex" secondAttribute="bottom" constant="5" id="pCi-Kz-051"/>
                             <constraint firstItem="P6S-BR-jtF" firstAttribute="top" secondItem="kUQ-54-9ex" secondAttribute="top" id="ruy-LG-Wbc"/>
                         </constraints>
                     </view>
