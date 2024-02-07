@@ -52,7 +52,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             let cell = menuTV.dequeueReusableCell(withIdentifier: RoomTypeTVC.identifier, for: indexPath) as! RoomTypeTVC
             cell.configure(with: SharedData.shared.gameType)
-            cell.applyCornerRadius()
             return cell
             
         } else {

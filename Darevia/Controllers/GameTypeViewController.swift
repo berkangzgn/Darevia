@@ -35,7 +35,6 @@ extension GameTypeViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = gamesCV.dequeueReusableCell(withReuseIdentifier: GamesCVC.identifier, for: indexPath) as! GamesCVC
         cell.configure(with: SharedData.shared.gameType[indexPath.row])
-        cell.applyCornerRadius()
         return cell
     }
     

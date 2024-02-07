@@ -10,15 +10,13 @@ import UIKit
 
 struct GameRoom {
     let roomID: String
-    let roomType: [GameType]?
+    let roomType: GameType
     let users: [User]?
-    let roomName: String
     
-    init(roomID: String, roomType: [GameType]?, users: [User]?, roomName: String) {
+    init(roomID: String, roomType: GameType, users: [User]?) {
         self.roomID = roomID
         self.roomType = roomType
         self.users = users
-        self.roomName = roomName
     }
 }
 
@@ -69,6 +67,8 @@ class SharedData {
     static let shared = SharedData()
     var gameType: [GameType] = []
     var comments: [Comments] = []
+    var gameRoomUsers: [User] = []
+    var gameRoom: [GameRoom] = []
         
     private init() {
         let gameType1 = GameType(gameTypeID: "1", gameTypeName: "Game 1", questions: ["Question1",
@@ -91,7 +91,7 @@ class SharedData {
                                                                                          "Question3",
                                                                                          "Question4",
                                                                                          "Question5"], gameRoomColor: .systemOrange)
-        let gameType5 = GameType(gameTypeID: "5", gameTypeName: "Game 5", questions: ["Question1", 
+        let gameType5 = GameType(gameTypeID: "5", gameTypeName: "Game 5", questions: ["Question1",
                                                                                          "Question2",
                                                                                          "Question3",
                                                                                          "Question4",
@@ -105,5 +105,15 @@ class SharedData {
         let comment5 = Comments(commentID: "5", commenterUser: "TestUser1", commentText: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
         
         self.comments = [comment1, comment2, comment3, comment4, comment5]
+        
+        let user1 = User(userID: "1", userName: "John", gender: "Man", roomID: "1", score: 0)
+        let user2 = User(userID: "1", userName: "Abdullah", gender: "Man", roomID: "1", score: 0)
+        let user3 = User(userID: "1", userName: "Xio", gender: "Woman", roomID: "1", score: 0)
+        let user4 = User(userID: "1", userName: "Afreen", gender: "Woman", roomID: "1", score: 0)
+        
+        self.gameRoomUsers = [user1, user2, user3, user4]
+        
+        let gameRoom1 = GameRoom(roomID: "830175", roomType: gameType1, users: gameRoomUsers)
+        self.gameRoom = [gameRoom1]
     }
 }
