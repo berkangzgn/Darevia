@@ -65,23 +65,20 @@ class WaitingRoomViewController: UIViewController {
         let shareText = "Bu paylaşılacak metin."
         let shareURL = URL(string: "https://www.example.com")
 
-        // Paylaşımı oluştur
         let activityViewController = UIActivityViewController(activityItems: [shareText, shareURL as Any], applicationActivities: nil)
 
-        // Paylaşım ekranını göster
         present(activityViewController, animated: true, completion: nil)
     }
 }
 
 extension WaitingRoomViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SharedData.shared.gameRoom[0].users?.count ?? 0
+        return SharedData.shared.gameRoom[0].users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = playersTV.dequeueReusableCell(withIdentifier: UserListTVC.identifier, for: indexPath) as! UserListTVC
+        cell.configure(with: SharedData.shared.gameRoom[0].users)
         return cell
     }
-    
-    
 }

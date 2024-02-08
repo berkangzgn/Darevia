@@ -23,7 +23,7 @@ class RoomTypeCVC: UICollectionViewCell {
     public func configure(with model: GameType) {
         self.roomTypeL.text = model.gameTypeName
         self.roomTypeBGV.backgroundColor = model.gameRoomColor
-        self.roomTypeBGV.applyCornerRadius()
+        self.roomTypeBGV.applySoftCornerRadius()
         self.roomTypeImg.tintColor = .appColor
     }
 

@@ -45,7 +45,7 @@ extension RoomTypeTVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = roomTypeCV.dequeueReusableCell(withReuseIdentifier: RoomTypeCVC.identifier, for: indexPath) as! RoomTypeCVC
         cell.configure(with: gameType[indexPath.row])
-        cell.applyCornerRadius()
+        cell.applySoftCornerRadius()
         return cell
     }
     

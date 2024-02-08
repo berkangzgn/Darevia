@@ -46,7 +46,7 @@ extension CommentsTVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = commentCV.dequeueReusableCell(withReuseIdentifier: CommentCVC.identifier, for: indexPath) as! CommentCVC
         cell.configure(with: comments[indexPath.row])
-        cell.applyCornerRadius()
+        cell.applySoftCornerRadius()
         cell.backgroundColor = .appWhite
         return cell
     }

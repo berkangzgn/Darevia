@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l55-ho-aq9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1br-90-4G7">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -255,6 +255,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YV0-an-paF">
                                 <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YV0-an-paF" secondAttribute="height" multiplier="75:13" id="QHW-Re-Djw"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNA-ey-Ndy">
                                 <rect key="frame" x="0.0" y="85" width="375" height="421"/>
@@ -360,6 +363,7 @@
                                             <constraint firstItem="mK9-dP-ijy" firstAttribute="top" secondItem="FcC-az-vE9" secondAttribute="top" id="ONU-Mz-nAQ"/>
                                             <constraint firstAttribute="trailing" secondItem="mK9-dP-ijy" secondAttribute="trailing" id="Pzq-sy-4fs"/>
                                             <constraint firstAttribute="bottom" secondItem="mK9-dP-ijy" secondAttribute="bottom" id="iE9-Su-9FO"/>
+                                            <constraint firstAttribute="width" secondItem="FcC-az-vE9" secondAttribute="height" multiplier="350:69" id="oXz-pE-66u"/>
                                             <constraint firstItem="mK9-dP-ijy" firstAttribute="leading" secondItem="FcC-az-vE9" secondAttribute="leading" id="qVg-Gt-vhq"/>
                                         </constraints>
                                     </view>
@@ -372,7 +376,6 @@
                                     <constraint firstItem="FcC-az-vE9" firstAttribute="top" secondItem="Jfi-Ld-5d6" secondAttribute="bottom" constant="8" id="ePX-5e-S7w"/>
                                     <constraint firstAttribute="trailing" secondItem="Jfi-Ld-5d6" secondAttribute="trailing" constant="8" id="i6Q-YH-ifg"/>
                                     <constraint firstAttribute="width" secondItem="Lj7-9I-FMY" secondAttribute="height" multiplier="375:161" id="l9G-Cv-7EK"/>
-                                    <constraint firstItem="FcC-az-vE9" firstAttribute="width" secondItem="FcC-az-vE9" secondAttribute="height" multiplier="350:69" id="oXz-pE-66u"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -384,7 +387,6 @@
                             <constraint firstItem="YV0-an-paF" firstAttribute="leading" secondItem="ERb-1x-Lfq" secondAttribute="leading" id="8gM-vl-cwL"/>
                             <constraint firstItem="FWy-TG-LB0" firstAttribute="trailing" secondItem="YV0-an-paF" secondAttribute="trailing" id="HQr-3g-ORB"/>
                             <constraint firstItem="FcC-az-vE9" firstAttribute="width" secondItem="ERb-1x-Lfq" secondAttribute="width" multiplier="0.8" id="Jlb-lL-VMd"/>
-                            <constraint firstItem="YV0-an-paF" firstAttribute="width" secondItem="YV0-an-paF" secondAttribute="height" multiplier="75:13" id="QHW-Re-Djw"/>
                             <constraint firstItem="FWy-TG-LB0" firstAttribute="trailing" secondItem="hNA-ey-Ndy" secondAttribute="trailing" id="U1q-dp-20m"/>
                             <constraint firstItem="hNA-ey-Ndy" firstAttribute="top" secondItem="YV0-an-paF" secondAttribute="bottom" id="koY-EG-Wrx"/>
                             <constraint firstItem="FWy-TG-LB0" firstAttribute="bottom" secondItem="Lj7-9I-FMY" secondAttribute="bottom" id="kpU-g4-a3M"/>

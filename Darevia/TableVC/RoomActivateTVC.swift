@@ -32,7 +32,7 @@ class RoomActivateTVC: UITableViewCell {
 
     private func setView() {
         cellV.backgroundColor = .appBluredColor
-        cellV.applyCornerRadius()
+        cellV.applySoftCornerRadius()
         
         playNowImg.tintColor = .appColor
         

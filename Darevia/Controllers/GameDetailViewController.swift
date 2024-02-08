@@ -43,7 +43,7 @@ class GameDetailViewController: UIViewController {
         detailCV.dataSource = self
         
         createGameBtnV.backgroundColor = .appColor
-        createGameBtnV.applyCornerRadius()
+        createGameBtnV.applySoftCornerRadius()
         
         createGameBtn.setTitle("Create Game", for: .normal) // TODO: Lang change
         createGameBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)

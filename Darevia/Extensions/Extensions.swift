@@ -76,6 +76,12 @@ extension UIColor {
 
 extension UIView {
     // Corner radius
+    func applySoftCornerRadius() {
+        self.layer.cornerRadius = 10.0
+        self.layer.masksToBounds = true
+        self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+    }
+    
     func applyCornerRadius() {
         self.layer.cornerRadius = self.frame.height / 2.0
         self.layer.masksToBounds = true
@@ -83,7 +89,7 @@ extension UIView {
     }
     
     func applyTopCornerRadius() {
-        self.layer.cornerRadius = 10.0
+        self.layer.cornerRadius = 20.0
         self.layer.masksToBounds = true
         self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }

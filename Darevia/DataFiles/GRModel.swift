@@ -11,9 +11,9 @@ import UIKit
 struct GameRoom {
     let roomID: String
     let roomType: GameType
-    let users: [User]?
+    let users: [User]
     
-    init(roomID: String, roomType: GameType, users: [User]?) {
+    init(roomID: String, roomType: GameType, users: [User]) {
         self.roomID = roomID
         self.roomType = roomType
         self.users = users

@@ -19,6 +19,6 @@ class DetailCVC: UICollectionViewCell {
         super.awakeFromNib()
         
         cellBGV.backgroundColor = .appWhite
-        cellBGV.applyCornerRadius()
+        cellBGV.applySoftCornerRadius()
     }
 }

@@ -17,6 +17,10 @@ class UserListTVC: UITableViewCell {
         self.setView()
     }
 
+    func configure(with comments: [User] ) {
+        
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
