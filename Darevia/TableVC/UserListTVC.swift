@@ -9,6 +9,10 @@ import UIKit
 
 class UserListTVC: UITableViewCell {
 
+    @IBOutlet weak var userImgV: UIImageView!
+    @IBOutlet weak var userNameL: UILabel!
+    @IBOutlet weak var scoreL: UILabel!
+    
     static let  identifier = "UserListTVC"
     static func nib() -> UINib { return UINib(nibName: "UserListTVC", bundle: nil) }
     
@@ -16,18 +20,15 @@ class UserListTVC: UITableViewCell {
         super.awakeFromNib()
         self.setView()
     }
-
-    func configure(with comments: [User] ) {
-        
-    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        self.setView()
     }
     
     private func setView() {
+        userImgV.makeCircular()
         
     }
     
