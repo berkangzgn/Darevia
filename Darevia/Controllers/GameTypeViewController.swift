@@ -19,7 +19,6 @@ class GameTypeViewController: UIViewController {
     
     private func setView() {
         view.backgroundColor = .appDark
-        
         gamesCV.register(GamesCVC.nib(), forCellWithReuseIdentifier: GamesCVC.identifier)
         gamesCV.delegate = self
         gamesCV.dataSource = self

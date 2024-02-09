@@ -32,11 +32,13 @@ class ViewController: UIViewController {
     }
     
     @objc private func playNowButtonClicked() {
-        present(GameTypeViewController(), animated: true)
+        let gameTypeViewController = GameTypeViewController()
+        gameTypeViewController.modalPresentationStyle = .fullScreen
+        present(gameTypeViewController, animated: true, completion: nil)
         print("Play Now button tapped in ViewController")
     }
 }
-
+ 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -45,6 +47,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = menuTV.dequeueReusableCell(withIdentifier: RoomActivateTVC.identifier, for: indexPath) as! RoomActivateTVC
+            
             cell.playNowBtn.addTarget(self, action: #selector(playNowButtonClicked), for: .touchUpInside)
             cell.enterGameBtn.addTarget(self, action: #selector(enterCodeButtonClicked), for: .touchUpInside)
             return cell

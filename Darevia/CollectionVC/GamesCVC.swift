@@ -22,13 +22,13 @@ class GamesCVC: UICollectionViewCell {
         
         gameNameL.textColor = .appWhite
         gameDetailL.textColor = .appWhite
+        gameImg.tintColor = .appWhite
+        gameColoredV.applySoftCornerRadius()
     }
 
     public func configure(with model: GameType) {
         self.gameNameL.text = model.gameTypeName
         self.gameColoredV.backgroundColor = model.gameRoomColor
-        self.gameColoredV.applySoftCornerRadius()
-        self.gameImg.tintColor = .appWhite
         self.gameDetailL.text = model.gameTypeName
     }
     
