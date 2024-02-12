@@ -12,13 +12,19 @@ class GameTypeViewController: UIViewController {
     @IBOutlet weak var upperV: UIView!
     @IBOutlet weak var gamesCV: UICollectionView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        gamesCV.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setView()
     }
     
     private func setView() {
+        
         view.backgroundColor = .appDark
+//        gamesCV.reloadData()
         gamesCV.register(GamesCVC.nib(), forCellWithReuseIdentifier: GamesCVC.identifier)
         gamesCV.delegate = self
         gamesCV.dataSource = self

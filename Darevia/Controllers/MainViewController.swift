@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Darevia
 //
 //  Created by Berkan Gezgin on 31.01.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     @IBOutlet var menuTV: UITableView!
     
@@ -32,14 +32,17 @@ class ViewController: UIViewController {
     }
     
     @objc private func playNowButtonClicked() {
-        let gameTypeViewController = GameTypeViewController()
-        gameTypeViewController.modalPresentationStyle = .fullScreen
-        present(gameTypeViewController, animated: true, completion: nil)
+        if let gameTypeViewController = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "GameTypeViewVC") as? GameTypeViewController {
+            gameTypeViewController.modalPresentationStyle = .fullScreen
+            present(gameTypeViewController, animated: true, completion: nil)
+        }
+
         print("Play Now button tapped in ViewController")
     }
 }
  
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }

@@ -24,8 +24,8 @@
 		DEB4E3702B73C7FA005FBFFF /* WaitingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E36F2B73C7FA005FBFFF /* WaitingRoomViewController.swift */; };
 		DEB4E3732B73D3EC005FBFFF /* UserListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E3712B73D3EC005FBFFF /* UserListTVC.swift */; };
 		DEB4E3742B73D3EC005FBFFF /* UserListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB4E3722B73D3EC005FBFFF /* UserListTVC.xib */; };
+		DEB4E3792B7AC146005FBFFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E3782B7AC146005FBFFF /* MainViewController.swift */; };
 		DEDF432F2B6A963E0085B011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF432E2B6A963E0085B011 /* AppDelegate.swift */; };
-		DEDF43332B6A963E0085B011 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF43322B6A963E0085B011 /* ViewController.swift */; };
 		DEDF43362B6A963E0085B011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDF43342B6A963E0085B011 /* Main.storyboard */; };
 		DEDF43382B6A96410085B011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDF43372B6A96410085B011 /* Assets.xcassets */; };
 		DEDF433B2B6A96410085B011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDF43392B6A96410085B011 /* LaunchScreen.storyboard */; };
@@ -73,9 +73,9 @@
 		DEB4E36F2B73C7FA005FBFFF /* WaitingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomViewController.swift; sourceTree = "<group>"; };
 		DEB4E3712B73D3EC005FBFFF /* UserListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTVC.swift; sourceTree = "<group>"; };
 		DEB4E3722B73D3EC005FBFFF /* UserListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTVC.xib; sourceTree = "<group>"; };
+		DEB4E3782B7AC146005FBFFF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DEDF432B2B6A963E0085B011 /* Darevia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Darevia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDF432E2B6A963E0085B011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DEDF43322B6A963E0085B011 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DEDF43352B6A963E0085B011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEDF43372B6A96410085B011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEDF433A2B6A96410085B011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -205,10 +205,10 @@
 		DEDF43602B6A99870085B011 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DEDF43322B6A963E0085B011 /* ViewController.swift */,
 				DE7403E32B6F0E1B00C84DE5 /* GameTypeViewController.swift */,
 				DEB4E3692B715F03005FBFFF /* GameDetailViewController.swift */,
 				DEB4E36F2B73C7FA005FBFFF /* WaitingRoomViewController.swift */,
+				DEB4E3782B7AC146005FBFFF /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -382,7 +382,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEDF43332B6A963E0085B011 /* ViewController.swift in Sources */,
 				DEB4E36A2B715F03005FBFFF /* GameDetailViewController.swift in Sources */,
 				DE95AC582B6BCCF2001122B8 /* GRModel.swift in Sources */,
 				DEB4E3702B73C7FA005FBFFF /* WaitingRoomViewController.swift in Sources */,
@@ -392,6 +391,7 @@
 				DEDF432F2B6A963E0085B011 /* AppDelegate.swift in Sources */,
 				DE7403E72B6F10BA00C84DE5 /* GamesCVC.swift in Sources */,
 				DEB4E36D2B71635A005FBFFF /* DetailCVC.swift in Sources */,
+				DEB4E3792B7AC146005FBFFF /* MainViewController.swift in Sources */,
 				DEDF43652B6A9C020085B011 /* RoomTypeCVC.swift in Sources */,
 				DEB4E3732B73D3EC005FBFFF /* UserListTVC.swift in Sources */,
 				DE95AC5B2B6C50AB001122B8 /* RoomActivateTVC.swift in Sources */,
