@@ -54,10 +54,6 @@ extension RoomTypeTVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 200)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didSelectGameDetail(gameTypeID: indexPath.row)
     }
