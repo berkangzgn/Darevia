@@ -47,6 +47,7 @@ class RoomActivateTVC: UITableViewCell {
         enterCodeV.addBorder(width: 2, color: .appWhite)
         
         enterGameBtn.tintColor = .appColor
+        enterGameImg.tintColor = .appColor
         
         enterCodeTF.placeholder = "Enter Code"
         enterCodeTF.setPlaceholderColor(.appWhite)

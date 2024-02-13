@@ -80,7 +80,7 @@ class SharedData {
                                                                                          "Question2",
                                                                                          "Question3",
                                                                                          "Question4",
-                                                                                         "Question5"], gameRoomColor: .systemPink)
+                                                                                         "Question5"], gameRoomColor: .appBluredColor)
         let gameType3 = GameType(gameTypeID: "3", gameTypeName: "Game 3", questions: ["Question1",
                                                                                          "Question2",
                                                                                          "Question3",

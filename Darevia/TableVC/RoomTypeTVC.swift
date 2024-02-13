@@ -31,6 +31,8 @@ class RoomTypeTVC: UITableViewCell {
         super.awakeFromNib()
         
         cellTitleL.text = "example title"
+        cellTitleL.textColor = .appWhite
+        cellTitleL.font = UIFont.boldSystemFont(ofSize: 16)
         roomTypeCV.register(RoomTypeCVC.nib(), forCellWithReuseIdentifier: RoomTypeCVC.identifier)
         roomTypeCV.delegate = self
         roomTypeCV.dataSource = self

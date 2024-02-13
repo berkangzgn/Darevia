@@ -27,6 +27,8 @@ class CommentsTVC: UITableViewCell {
         super.awakeFromNib()
         
         cellTitleL.text = "example title"
+        cellTitleL.textColor = .appWhite
+        cellTitleL.font = UIFont.boldSystemFont(ofSize: 16)
         commentCV.register(CommentCVC.nib(), forCellWithReuseIdentifier: CommentCVC.identifier)
         commentCV.delegate = self
         commentCV.dataSource = self
