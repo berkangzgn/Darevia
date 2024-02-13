@@ -100,7 +100,7 @@
         <!--Game Detail View Controller-->
         <scene sceneID="Jix-fr-sZK">
             <objects>
-                <viewController id="PCz-Ij-QbR" customClass="GameDetailViewController" customModule="Darevia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameDetailVC" id="PCz-Ij-QbR" customClass="GameDetailViewController" customModule="Darevia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FNk-io-hVH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +247,7 @@
         <!--Waiting Room View Controller-->
         <scene sceneID="Qyg-ry-3yQ">
             <objects>
-                <viewController id="l55-ho-aq9" customClass="WaitingRoomViewController" customModule="Darevia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WaitingRoomVC" id="l55-ho-aq9" customClass="WaitingRoomViewController" customModule="Darevia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERb-1x-Lfq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

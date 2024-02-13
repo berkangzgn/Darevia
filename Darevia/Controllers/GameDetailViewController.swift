@@ -51,7 +51,11 @@ class GameDetailViewController: UIViewController {
     }
     
     @IBAction func createGameClicked(_ sender: Any) {
-        // TODO: gamers waiting room yonlenme
+        if let waitingRoomVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "WaitingRoomVC") as? WaitingRoomViewController {
+            waitingRoomVC.modalPresentationStyle = .fullScreen
+            present(waitingRoomVC, animated: true, completion: nil)
+        }
     }
     
 }

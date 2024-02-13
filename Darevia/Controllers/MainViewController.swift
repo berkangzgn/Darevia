@@ -29,20 +29,19 @@ class MainViewController: UIViewController {
     
     @objc private func enterCodeButtonClicked() {
         print("Enter Game button tapped in ViewController")
+        // TODO: To be edited after api connection
     }
     
     @objc private func playNowButtonClicked() {
-        if let gameTypeViewController = UIStoryboard(name: "Main", bundle: nil)
+        if let gameTypeVC = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "GameTypeViewVC") as? GameTypeViewController {
-            gameTypeViewController.modalPresentationStyle = .fullScreen
-            present(gameTypeViewController, animated: true, completion: nil)
+            gameTypeVC.modalPresentationStyle = .fullScreen
+            present(gameTypeVC, animated: true, completion: nil)
         }
-
-        print("Play Now button tapped in ViewController")
     }
 }
  
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource, RoomTypeDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -58,6 +57,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             let cell = menuTV.dequeueReusableCell(withIdentifier: RoomTypeTVC.identifier, for: indexPath) as! RoomTypeTVC
             cell.configure(with: SharedData.shared.gameType)
+            cell.delegate = self
             return cell
             
         } else {
@@ -66,5 +66,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
             
         }
+    }
+
+    // RoomTypeDelegate metodunu uygulayın
+    func didSelectGameDetail(gameTypeID: Int) {
+        let gameDetailVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "GameDetailVC") as! GameDetailViewController
+        gameDetailVC.gameTypeID = gameTypeID
+        gameDetailVC.modalPresentationStyle = .fullScreen
+        present(gameDetailVC, animated: true, completion: nil)
     }
 }

@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol RoomTypeDelegate: AnyObject {
+    func didSelectGameDetail(gameTypeID: Int)
+}
+
 class RoomTypeTVC: UITableViewCell {
 
     @IBOutlet weak var cellTitleL: UILabel!
     @IBOutlet var roomTypeCV: UICollectionView!
     @IBOutlet weak var cellV: UIView!
     
+    weak var delegate: RoomTypeDelegate?
     static let  identifier = "RoomTypeTVC"
     static func nib() -> UINib { return UINib(nibName: "RoomTypeTVC", bundle: nil) }
     var gameType = [GameType]()
@@ -51,6 +56,10 @@ extension RoomTypeTVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 200, height: 200)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectGameDetail(gameTypeID: indexPath.row)
     }
     
 }

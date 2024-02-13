@@ -12,19 +12,13 @@ class GameTypeViewController: UIViewController {
     @IBOutlet weak var upperV: UIView!
     @IBOutlet weak var gamesCV: UICollectionView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        gamesCV.reloadData()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setView()
     }
     
     private func setView() {
-        
         view.backgroundColor = .appDark
-//        gamesCV.reloadData()
         gamesCV.register(GamesCVC.nib(), forCellWithReuseIdentifier: GamesCVC.identifier)
         gamesCV.delegate = self
         gamesCV.dataSource = self
@@ -59,5 +53,14 @@ extension GameTypeViewController: UICollectionViewDelegate, UICollectionViewData
         let cellWidth = (collectionView.bounds.width - 10 * 3) / 2
         let cellHeight: CGFloat = 205
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let gameDetailVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "GameDetailVC") as? GameDetailViewController {
+            gameDetailVC.gameTypeID = indexPath.row
+            gameDetailVC.modalPresentationStyle = .fullScreen
+            present(gameDetailVC, animated: true, completion: nil)
+        }
     }
 }
