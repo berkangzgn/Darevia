@@ -21,8 +21,6 @@ class WaitingRoomViewController: UIViewController {
     @IBOutlet weak var inviteBtnV: UIView!
     @IBOutlet weak var inviteBtn: UIButton!
     
-     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,6 +57,12 @@ class WaitingRoomViewController: UIViewController {
     }
     
     @IBAction func startGameClicked(_ sender: Any) {
+        // TODO: API connection to be added
+        if let waitingRoomVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "WaitingRoomVC") as? WaitingRoomViewController {
+            waitingRoomVC.modalPresentationStyle = .fullScreen
+            present(waitingRoomVC, animated: true, completion: nil)
+        }
     }
     
     @IBAction func inviteBtnClicked(_ sender: UIButton) {
