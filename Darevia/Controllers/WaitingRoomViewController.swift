@@ -45,7 +45,7 @@ class WaitingRoomViewController: UIViewController {
         startGameV.applyCornerRadius()
         
         startGameBtn.setTitle("Start Game", for: .normal) // TODO: Lang
-        startGameBtn.setTitleColor(.appWhite, for: .normal)
+        startGameBtn.setTitleColorExt(.appWhite)
         startGameBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         
         inviteCodeL.text = "Game Code: \(SharedData.shared.gameRoom[0].roomID)" // TODO: Lang
@@ -54,7 +54,7 @@ class WaitingRoomViewController: UIViewController {
         
         inviteBtnV.backgroundColor = .appWhite
         inviteBtnV.applyCornerRadius()
-        inviteBtn.setTitleColor(.appColor, for: .normal)
+        inviteBtn.setTitleColorExt(.appColor)
         inviteBtn.setTitle("INVITE", for: .normal) // TODO: Lang
     }
     

@@ -34,7 +34,7 @@ class GameDetailViewController: UIViewController {
         
         titleL.text = SharedData.shared.gameType[gameTypeID].gameTypeName
         detailL.text = "Game details"
-//        detailTV.text = SharedData.shared.gameType[gameTypeID].gameDesc // TODO: gameDesc eklenecek
+//        detailTV.text = SharedData.shared.gameType[gameTypeID].gameDesc // TODO: gameDesc to be added
         
         collectionV.backgroundColor = SharedData.shared.gameType[gameTypeID].gameRoomColor
         
@@ -43,11 +43,11 @@ class GameDetailViewController: UIViewController {
         detailCV.dataSource = self
         
         createGameBtnV.backgroundColor = .appColor
-        createGameBtnV.applySoftCornerRadius()
+        createGameBtnV.applyCornerRadius()
         
         createGameBtn.setTitle("Create Game", for: .normal) // TODO: Lang change
         createGameBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
-        createGameBtn.setTitleColor(.appWhite, for: .normal)
+        createGameBtn.setTitleColorExt(.appWhite)
     }
     
     @IBAction func createGameClicked(_ sender: Any) {
@@ -57,7 +57,6 @@ class GameDetailViewController: UIViewController {
             present(waitingRoomVC, animated: true, completion: nil)
         }
     }
-    
 }
 
 extension GameDetailViewController: UICollectionViewDataSource, UICollectionViewDelegate {

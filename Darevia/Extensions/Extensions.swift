@@ -99,32 +99,18 @@ extension UIView {
         layer.borderWidth = width
         layer.borderColor = color.cgColor
     }
-    
-    // Blur effect
-    func addBlurEffect(style: UIBlurEffect.Style = .light, alpha: CGFloat = 1.0) {
-        let blurEffect = UIBlurEffect(style: style)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        
-        blurEffectView.frame = bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.alpha = alpha
-        blurEffectView.isUserInteractionEnabled = false // UIVisualEffectView'in etkileşimini devre dışı bırak
-        
-        addSubview(blurEffectView)
-        
-        // Eğer blurEffectView'in altında bir UITextField varsa, etkileşim özelliğini etkinleştir
-        for subview in subviews {
-            if let textField = subview as? UITextField {
-                textField.isUserInteractionEnabled = true
-            }
-        }
-    }
-    
 }
 
 extension UIImageView {
     func makeCircular() {
         self.layer.cornerRadius = self.frame.size.width / 2
         self.clipsToBounds = true
+    }
+}
+
+extension UIButton {
+    func setTitleColorExt(_ color: UIColor) {
+        self.setTitleColor(color, for: .normal)
+        self.setTitleColor(color, for: .highlighted)
     }
 }
