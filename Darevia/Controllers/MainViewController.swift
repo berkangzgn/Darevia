@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var topV: UIView!
+    @IBOutlet weak var titleL: UILabel!
     @IBOutlet var menuTV: UITableView!
     
     override func viewDidLoad() {

@@ -10,6 +10,9 @@ import UIKit
 class WaitingRoomViewController: UIViewController {
 
     @IBOutlet weak var topV: UIView!
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var backBtnImg: UIImageView!
+    @IBOutlet weak var titleL: UILabel!
     @IBOutlet weak var listV: UIView!
     @IBOutlet weak var listBottomV: UIView!
     @IBOutlet weak var startGameDescL: UILabel!
@@ -72,6 +75,20 @@ class WaitingRoomViewController: UIViewController {
         let activityViewController = UIActivityViewController(activityItems: [shareText, shareURL as Any], applicationActivities: nil)
 
         present(activityViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func backBtnClicked(_ sender: Any) {
+        let alertController = UIAlertController(title: "Delete Game", message: "Are you sure?", preferredStyle: .alert) // TODO: Lang
+
+        let confirmAction = UIAlertAction(title: "Yes", style: .default) { (_) in // TODO: Lang
+            self.dismiss(animated: true, completion: nil)
+        }
+        alertController.addAction(confirmAction)
+
+        let cancelAction = UIAlertAction(title: "No", style: .cancel) // TODO: Lang
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
     }
 }
 

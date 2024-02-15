@@ -9,6 +9,9 @@ import UIKit
 
 class GameTypeViewController: UIViewController {
 
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var backBtnImg: UIImageView!
+    @IBOutlet weak var titleL: UILabel!
     @IBOutlet weak var upperV: UIView!
     @IBOutlet weak var gamesCV: UICollectionView!
     
@@ -24,6 +27,9 @@ class GameTypeViewController: UIViewController {
         gamesCV.dataSource = self
     }
 
+    @IBAction func backBtnClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension GameTypeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

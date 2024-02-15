@@ -10,11 +10,14 @@ import UIKit
 class GameDetailViewController: UIViewController {
 
     @IBOutlet weak var topV: UIView!
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var backBtnImg: UIImageView!
+    @IBOutlet weak var titleL: UILabel!
     @IBOutlet weak var collectionV: UIView!
     @IBOutlet weak var detailCV: UICollectionView!
     @IBOutlet weak var detailV: UIView!
     @IBOutlet weak var detailImg: UIImageView!
-    @IBOutlet weak var titleL: UILabel!
+    @IBOutlet weak var gameTitleL: UILabel!
     @IBOutlet weak var detailL: UILabel!
     @IBOutlet weak var detailTV: UITextView!
     @IBOutlet weak var createGameBtnV: UIView!
@@ -56,6 +59,10 @@ class GameDetailViewController: UIViewController {
             waitingRoomVC.modalPresentationStyle = .fullScreen
             present(waitingRoomVC, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func backBtnClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
