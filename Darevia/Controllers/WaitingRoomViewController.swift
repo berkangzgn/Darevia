@@ -33,7 +33,7 @@ class WaitingRoomViewController: UIViewController {
     private func setView() {
         titleL.text = "DAREVIA"
         titleL.textColor = .appWhite
-        titleL.font = UIFont.boldSystemFont(ofSize: 16)
+        titleL.font = UIFont.boldSystemFont(ofSize: 20)
         
         backBtnImg.tintColor = .appWhite
         
@@ -67,15 +67,15 @@ class WaitingRoomViewController: UIViewController {
     
     @IBAction func startGameClicked(_ sender: Any) {
         // TODO: API connection to be added
-        if let waitingRoomVC = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "WaitingRoomVC") as? WaitingRoomViewController {
-            waitingRoomVC.modalPresentationStyle = .fullScreen
-            present(waitingRoomVC, animated: true, completion: nil)
+        if let gameVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "GameVC") as? GameViewController {
+            gameVC.modalPresentationStyle = .fullScreen
+            present(gameVC, animated: true, completion: nil)
         }
     }
     
     @IBAction func inviteBtnClicked(_ sender: UIButton) {
-        let shareText = "Bu paylaşılacak metin."
+        let shareText = "Why don't we see you among us?" // TODO: Lang
         let shareURL = URL(string: "https://www.example.com")
 
         let activityViewController = UIActivityViewController(activityItems: [shareText, shareURL as Any], applicationActivities: nil)

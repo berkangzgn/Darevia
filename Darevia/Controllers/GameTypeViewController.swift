@@ -23,7 +23,7 @@ class GameTypeViewController: UIViewController {
     private func setView() {
         titleL.text = "DAREVIA"
         titleL.textColor = .appWhite
-        titleL.font = UIFont.boldSystemFont(ofSize: 16)
+        titleL.font = UIFont.boldSystemFont(ofSize: 20)
         
         backBtnImg.tintColor = .appWhite
         

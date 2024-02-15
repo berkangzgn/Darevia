@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     private func setView() {
         titleL.text = "DAREVIA"
         titleL.textColor = .appWhite
-        titleL.font = UIFont.boldSystemFont(ofSize: 16)
+        titleL.font = UIFont.boldSystemFont(ofSize: 20)
         
         menuTV.register(RoomTypeTVC.nib(), forCellReuseIdentifier: RoomTypeTVC.identifier)
         menuTV.register(RoomActivateTVC.nib(), forCellReuseIdentifier: RoomActivateTVC.identifier)
@@ -33,8 +33,19 @@ class MainViewController: UIViewController {
     }
     
     @objc private func enterCodeButtonClicked() {
-        print("Enter Game button tapped in ViewController")
         // TODO: To be edited after api connection
+        let alertController = UIAlertController(title: "App in developed.", message: "Room check will take place after the API connection. Therefore we redirect you to another page for now.", preferredStyle: .alert) // TODO: Lang
+
+        let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in // TODO: Lang
+            if let gameVC = UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(withIdentifier: "GameVC") as? GameViewController {
+                gameVC.modalPresentationStyle = .fullScreen
+                self.present(gameVC, animated: true, completion: nil)
+            }
+        }
+        
+        alertController.addAction(confirmAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     @objc private func playNowButtonClicked() {
@@ -73,7 +84,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, RoomTy
         }
     }
 
-    // RoomTypeDelegate metodunu uygulayın
     func didSelectGameDetail(gameTypeID: Int) {
         let gameDetailVC = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "GameDetailVC") as! GameDetailViewController

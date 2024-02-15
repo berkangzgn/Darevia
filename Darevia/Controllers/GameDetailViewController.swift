@@ -33,13 +33,13 @@ class GameDetailViewController: UIViewController {
     
     private func setView() {
         titleL.text = "DAREVIA"
-        titleL.textColor = .appWhite
-        titleL.font = UIFont.boldSystemFont(ofSize: 16)
+        titleL.textColor = .appDark
+        titleL.font = UIFont.boldSystemFont(ofSize: 20)
         
         backBtnImg.tintColor = .appDark
         
         detailV.applyTopCornerRadius()
-        detailV.backgroundColor = .appDark
+        detailV.backgroundColor = .appWhite
         
         titleL.text = SharedData.shared.gameType[gameTypeID].gameTypeName
         detailL.text = "Game details"
