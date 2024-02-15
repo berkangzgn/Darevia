@@ -31,6 +31,12 @@ class WaitingRoomViewController: UIViewController {
     }
     
     private func setView() {
+        titleL.text = "DAREVIA"
+        titleL.textColor = .appWhite
+        titleL.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        backBtnImg.tintColor = .appWhite
+        
         view.backgroundColor = .appColor
         listV.backgroundColor = .appWhite
         listV.applyTopCornerRadius()

@@ -21,7 +21,11 @@ class GameViewController: UIViewController {
     }
     
     private func setView() {
+        titleL.text = "DAREVIA"
+        titleL.textColor = .appWhite
+        titleL.font = UIFont.boldSystemFont(ofSize: 16)
         
+        backBtnImg.tintColor = .appWhite
     }
     
     @IBAction func bakcBtnClicked(_ sender: Any) {

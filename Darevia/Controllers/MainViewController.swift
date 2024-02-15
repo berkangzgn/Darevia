@@ -8,7 +8,6 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
     @IBOutlet weak var topV: UIView!
     @IBOutlet weak var titleL: UILabel!
     @IBOutlet var menuTV: UITableView!
@@ -19,6 +18,10 @@ class MainViewController: UIViewController {
     }
     
     private func setView() {
+        titleL.text = "DAREVIA"
+        titleL.textColor = .appWhite
+        titleL.font = UIFont.boldSystemFont(ofSize: 16)
+        
         menuTV.register(RoomTypeTVC.nib(), forCellReuseIdentifier: RoomTypeTVC.identifier)
         menuTV.register(RoomActivateTVC.nib(), forCellReuseIdentifier: RoomActivateTVC.identifier)
         menuTV.register(CommentsTVC.nib(), forCellReuseIdentifier: CommentsTVC.identifier)

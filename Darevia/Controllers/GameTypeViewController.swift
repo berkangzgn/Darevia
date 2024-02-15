@@ -21,7 +21,14 @@ class GameTypeViewController: UIViewController {
     }
     
     private func setView() {
+        titleL.text = "DAREVIA"
+        titleL.textColor = .appWhite
+        titleL.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        backBtnImg.tintColor = .appWhite
+        
         view.backgroundColor = .appDark
+        
         gamesCV.register(GamesCVC.nib(), forCellWithReuseIdentifier: GamesCVC.identifier)
         gamesCV.delegate = self
         gamesCV.dataSource = self
