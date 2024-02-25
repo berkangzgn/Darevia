@@ -100,13 +100,13 @@ class WaitingRoomViewController: UIViewController {
 
 extension WaitingRoomViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SharedData.shared.gameRoom[0].users.count
+        return SharedData.shared.gameRoomUsers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = playersTV.dequeueReusableCell(withIdentifier: UserListTVC.identifier, for: indexPath) as! UserListTVC
-        cell.userNameL.text = SharedData.shared.gameRoom[0].users[indexPath.row].userName
-        cell.scoreL.text = "\(SharedData.shared.gameRoom[0].users[indexPath.row].score) point 🥳"
+        cell.userNameL.text = SharedData.shared.gameRoomUsers[indexPath.row].userName
+        cell.scoreL.text = "\(SharedData.shared.gameRoomUsers[indexPath.row].score) point 🥳"
         return cell
     }
 }

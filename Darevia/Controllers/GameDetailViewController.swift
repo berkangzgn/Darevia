@@ -41,7 +41,6 @@ class GameDetailViewController: UIViewController {
         detailV.applyTopCornerRadius()
         detailV.backgroundColor = .appWhite
         
-        titleL.text = SharedData.shared.gameType[gameTypeID].gameTypeName
         detailL.text = "Game details"
 //        detailTV.text = SharedData.shared.gameType[gameTypeID].gameDesc // TODO: gameDesc to be added
         
@@ -60,10 +59,10 @@ class GameDetailViewController: UIViewController {
     }
     
     @IBAction func createGameClicked(_ sender: Any) {
-        if let waitingRoomVC = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "WaitingRoomVC") as? WaitingRoomViewController {
-            waitingRoomVC.modalPresentationStyle = .fullScreen
-            present(waitingRoomVC, animated: true, completion: nil)
+        if let createUserVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "CreateUserVC") as? CreateUserViewController {
+            createUserVC.modalPresentationStyle = .fullScreen
+            present(createUserVC, animated: true, completion: nil)
         }
     }
     
