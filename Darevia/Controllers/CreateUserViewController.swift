@@ -87,7 +87,7 @@ class CreateUserViewController: UIViewController {
         createUserBtnV.applyCornerRadius()
         
         createUserL.text = "Create" //  TODO: Lang
-        createUserL.font = .systemFont(ofSize: 17)
+        createUserL.font = .boldSystemFont(ofSize: 17)
         createUserL.textColor =  .appColor
     }
 

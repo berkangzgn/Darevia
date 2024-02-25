@@ -21,7 +21,9 @@ class GamesCVC: UICollectionViewCell {
         super.awakeFromNib()
         
         gameNameL.textColor = .appWhite
+        gameNameL.font = UIFont.boldSystemFont(ofSize: 16)
         gameDetailL.textColor = .appWhite
+        gameDetailL.font = .systemFont(ofSize: 14)
         gameImg.tintColor = .appWhite
         gameColoredV.applySoftCornerRadius()
     }
@@ -29,7 +31,7 @@ class GamesCVC: UICollectionViewCell {
     public func configure(with model: GameType) {
         self.gameNameL.text = model.gameTypeName
         self.gameColoredV.backgroundColor = model.gameRoomColor
-        self.gameDetailL.text = model.gameTypeName
+        self.gameDetailL.text = model.gameDetail
     }
     
 }
