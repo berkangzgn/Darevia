@@ -30,30 +30,27 @@ class RoomActivateTVC: UITableViewCell {
         enterCodeTF.addDoneButtonToKeyboard(target: self, action: #selector(doneButtonTapped))
     }
 
-    private func setView() {
-        cellV.backgroundColor = .appBluredColor
-        cellV.applySoftCornerRadius()
-        
-        playNowImg.tintColor = .appColor
+    private func setView() {        
+        playNowImg.tintColor = .appWhite
         
         playNowV.applyCornerRadius()
-        playNowV.backgroundColor = .appWhite
+        playNowV.backgroundColor = .appColor
         
         playNowL.text = "Play Now"
         playNowL.font = UIFont.boldSystemFont(ofSize: 18)
-        playNowL.textColor = .appColor
+        playNowL.textColor = .appWhite
         
         enterCodeV.applyCornerRadius()
-        enterCodeV.backgroundColor = .appColor
-        enterCodeV.addBorder(width: 2, color: .appWhite)
+        enterCodeV.backgroundColor = .appWhite
+        enterCodeV.addBorder(width: 2, color: .appColor)
         
-        enterGameBtn.tintColor = .appColor
-        enterGameImg.tintColor = .appColor
+        enterGameBtn.tintColor = .appWhite
+        enterGameImg.tintColor = .appWhite
         
         enterCodeTF.placeholder = "Enter Code"
         enterCodeTF.font = UIFont.boldSystemFont(ofSize: 18)
-        enterCodeTF.setPlaceholderColor(.appWhite)
-        enterCodeTF.textColor = .appWhite
+        enterCodeTF.setPlaceholderColor(.appColor)
+        enterCodeTF.textColor = .appColor
         enterCodeTF.limitCharacterCount(6)
         enterCodeTF.keyboardType = .numberPad
         enterCodeTF.allowOnlyNumericInput()

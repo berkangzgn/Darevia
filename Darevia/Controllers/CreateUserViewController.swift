@@ -43,52 +43,52 @@ class CreateUserViewController: UIViewController {
     }
     
     private func setView() {
-        view.backgroundColor = .appColor
+        view.backgroundColor = .appWhite
         
         titleL.text = "DAREVIA"
-        titleL.textColor = .appWhite
+        titleL.textColor = .appColor
         titleL.font = UIFont.boldSystemFont(ofSize: 20)
         
-        backBtnImg.tintColor = .appWhite
+        backBtnImg.tintColor = .appColor
         
-        boxV.backgroundColor = .appBluredColor
-        boxV.applySoftCornerRadius()
-        
-        nameV.backgroundColor = .appColor
+        nameV.backgroundColor = .appWhite
         nameV.applyCornerRadius()
-        nameV.addBorder(width: 2, color: .appWhite)
+        nameV.addBorder(width: 2, color: .appColor)
         
         nameTF.placeholder = "Please enter your name..." //  TODO: Lang
-        nameTF.setPlaceholderColor(.appWhite)
+        nameTF.setPlaceholderColor(.appColor)
         nameTF.font = .systemFont(ofSize: 17)
         nameTF.limitCharacterCount(15)
-        nameTF.textColor = .appWhite
+        nameTF.textColor = .appColor
         nameTF.addDoneButtonToKeyboard(target: self, action: #selector(doneButtonTapped))
         
         gender1L.text = "Man" //  TODO: Lang
-        gender1L.textColor = .appWhite
+        gender1L.textColor = .appColor
         gender1L.font = .systemFont(ofSize: 17)
-        gender1V.backgroundColor = .appColor
+        gender1V.backgroundColor = .appWhite
         gender1V.applyCornerRadius()
+        gender1V.addBorder(width: 2, color: .appColor)
         
         gender2L.text = "Woman" //  TODO: Lang
-        gender2L.textColor = .appWhite
+        gender2L.textColor = .appColor
         gender2L.font = .systemFont(ofSize: 17)
-        gender2V.backgroundColor = .appColor
+        gender2V.backgroundColor = .appWhite
         gender2V.applyCornerRadius()
+        gender2V.addBorder(width: 2, color: .appColor)
         
         gender3L.text = "Other" //  TODO: Lang
-        gender3L.textColor = .appWhite
+        gender3L.textColor = .appColor
         gender3L.font = .systemFont(ofSize: 17)
-        gender3V.backgroundColor = .appColor
+        gender3V.backgroundColor = .appWhite
         gender3V.applyCornerRadius()
+        gender3V.addBorder(width: 2, color: .appColor)
         
-        createUserBtnV.backgroundColor = .appWhite
+        createUserBtnV.backgroundColor = .appColor
         createUserBtnV.applyCornerRadius()
         
         createUserL.text = "Create" //  TODO: Lang
         createUserL.font = .boldSystemFont(ofSize: 17)
-        createUserL.textColor =  .appColor
+        createUserL.textColor =  .appWhite
     }
 
     @IBAction func backBtnClicked(_ sender: Any) {
@@ -97,38 +97,38 @@ class CreateUserViewController: UIViewController {
     
     @IBAction func gender1Clicked(_ sender: Any) {
         gender = "Man"
-        gender1V.backgroundColor = .appWhite
-        gender1L.textColor = .appColor
+        gender1V.backgroundColor = .appColor
+        gender1L.textColor = .appWhite
         
-        gender2V.backgroundColor = .appColor
-        gender2L.textColor = .appWhite
+        gender2V.backgroundColor = .appWhite
+        gender2L.textColor = .appColor
         
-        gender3V.backgroundColor = .appColor
-        gender3L.textColor = .appWhite
+        gender3V.backgroundColor = .appWhite
+        gender3L.textColor = .appColor
     }
     
     @IBAction func gender2Clicked(_ sender: Any) {
         gender = "Woman"
-        gender2V.backgroundColor = .appWhite
-        gender2L.textColor = .appColor
+        gender2V.backgroundColor = .appColor
+        gender2L.textColor = .appWhite
         
-        gender1V.backgroundColor = .appColor
-        gender1L.textColor = .appWhite
+        gender1V.backgroundColor = .appWhite
+        gender1L.textColor = .appColor
         
-        gender3V.backgroundColor = .appColor
-        gender3L.textColor = .appWhite
+        gender3V.backgroundColor = .appWhite
+        gender3L.textColor = .appColor
     }
     
     @IBAction func gender3Clicked(_ sender: Any) {
         gender = "Other"
-        gender3V.backgroundColor = .appWhite
-        gender3L.textColor = .appColor
+        gender3V.backgroundColor = .appColor
+        gender3L.textColor = .appWhite
         
-        gender1V.backgroundColor = .appColor
-        gender1L.textColor = .appWhite
+        gender1V.backgroundColor = .appWhite
+        gender1L.textColor = .appColor
         
-        gender2V.backgroundColor = .appColor
-        gender2L.textColor = .appWhite
+        gender2V.backgroundColor = .appWhite
+        gender2L.textColor = .appColor
     }
     
     @IBAction func createUserBtnClicked(_ sender: Any) {

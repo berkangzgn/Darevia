@@ -5,7 +5,7 @@
 //  Created by Berkan Gezgin on 31.01.2024.
 //
 
-import UIKit
+import UIKit 
 
 class MainViewController: UIViewController {
     @IBOutlet weak var topV: UIView!
@@ -19,17 +19,17 @@ class MainViewController: UIViewController {
     
     private func setView() {
         titleL.text = "DAREVIA"
-        titleL.textColor = .appWhite
+        titleL.textColor = .appColor
         titleL.font = UIFont.boldSystemFont(ofSize: 20)
         
-        menuTV.register(RoomTypeTVC.nib(), forCellReuseIdentifier: RoomTypeTVC.identifier)
         menuTV.register(RoomActivateTVC.nib(), forCellReuseIdentifier: RoomActivateTVC.identifier)
+        menuTV.register(RoomTypeTVC.nib(), forCellReuseIdentifier: RoomTypeTVC.identifier)
         menuTV.register(CommentsTVC.nib(), forCellReuseIdentifier: CommentsTVC.identifier)
         
         menuTV.delegate = self
         menuTV.dataSource = self
         
-        view.backgroundColor = .appColor
+        view.backgroundColor = .appWhite
     }
     
     @objc private func enterCodeButtonClicked() {

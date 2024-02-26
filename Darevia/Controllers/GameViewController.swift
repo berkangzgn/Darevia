@@ -13,7 +13,11 @@ class GameViewController: UIViewController {
     @IBOutlet weak var gameCardV: UIView!
     @IBOutlet weak var questionTV: UITextView!
     @IBOutlet weak var buttonsV: UIView!
+    @IBOutlet weak var approveBtnV: UIView!
+    @IBOutlet weak var approveL: UILabel!
     @IBOutlet weak var approvalBtn: UIButton!
+    @IBOutlet weak var rejectBtnV: UIView!
+    @IBOutlet weak var rejectL: UILabel!
     @IBOutlet weak var rejectBtn: UIButton!
     
     var statu: Int = 0 // MARK: API will change the statu (0 - Questioner, 1- Answerer, 2 - Other)
@@ -37,13 +41,21 @@ class GameViewController: UIViewController {
         questionTV.textColor = .appDark
         questionTV.font = UIFont.boldSystemFont(ofSize: 19)
         
-        approvalBtn.setTitle("Done :)", for: .normal) // TODO: Lang
-        approvalBtn.setTitleColorExt(.appWhite)
-        approvalBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        approveBtnV.backgroundColor = .appBluredColor
+        approveBtnV.addBorder(width: 1, color: .appWhite)
+        approveBtnV.applyCornerRadius()
         
-        rejectBtn.setTitle("Not now :(", for: .normal) // TODO: Lang
-        rejectBtn.setTitleColorExt(.appWhite)
-        rejectBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        approveL.text = "Done" // TODO: Lang
+        approveL.textColor =  .appWhite
+        approveL.font = UIFont.boldSystemFont(ofSize: 20)
+        
+        rejectBtnV.backgroundColor = .appBluredColor
+        rejectBtnV.addBorder(width: 1, color: .appWhite)
+        rejectBtnV.applyCornerRadius()
+        
+        rejectL.text = "Not now :(" // TODO: Lang
+        rejectL.textColor =  .appWhite
+        rejectL.font = .systemFont(ofSize: 20)
         
         if statu == 0 { // Questioner
             buttonsV.isHidden = false
