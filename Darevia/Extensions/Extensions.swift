@@ -94,10 +94,21 @@ extension UIView {
         self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
+    func applyBottomCornerRadius() {
+        self.layer.cornerRadius = 20.0
+        self.layer.masksToBounds = true
+        self.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+    }
+    
     // Add border
     func addBorder(width: CGFloat, color: UIColor) {
         layer.borderWidth = width
         layer.borderColor = color.cgColor
+    }
+    
+    func makeViewCircular() {
+        self.layer.cornerRadius = self.frame.size.width / 2
+        self.clipsToBounds = true
     }
 }
 

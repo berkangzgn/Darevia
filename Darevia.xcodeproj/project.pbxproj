@@ -19,6 +19,7 @@
 		DE95AC662B6D677E001122B8 /* CommentCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95AC642B6D677E001122B8 /* CommentCVC.swift */; };
 		DE95AC672B6D677E001122B8 /* CommentCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE95AC652B6D677E001122B8 /* CommentCVC.xib */; };
 		DEA84AE02B8BB5C5002CE6CB /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA84ADF2B8BB5C5002CE6CB /* CreateUserViewController.swift */; };
+		DEAE04DF2B97BC350003B6AB /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE04DE2B97BC350003B6AB /* TaskViewController.swift */; };
 		DEB4E36A2B715F03005FBFFF /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E3692B715F03005FBFFF /* GameDetailViewController.swift */; };
 		DEB4E36D2B71635A005FBFFF /* DetailCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E36B2B71635A005FBFFF /* DetailCVC.swift */; };
 		DEB4E36E2B71635A005FBFFF /* DetailCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB4E36C2B71635A005FBFFF /* DetailCVC.xib */; };
@@ -70,6 +71,7 @@
 		DE95AC642B6D677E001122B8 /* CommentCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCVC.swift; sourceTree = "<group>"; };
 		DE95AC652B6D677E001122B8 /* CommentCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCVC.xib; sourceTree = "<group>"; };
 		DEA84ADF2B8BB5C5002CE6CB /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		DEAE04DE2B97BC350003B6AB /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		DEB4E3692B715F03005FBFFF /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		DEB4E36B2B71635A005FBFFF /* DetailCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCVC.swift; sourceTree = "<group>"; };
 		DEB4E36C2B71635A005FBFFF /* DetailCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCVC.xib; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				DEA84ADF2B8BB5C5002CE6CB /* CreateUserViewController.swift */,
 				DEB4E36F2B73C7FA005FBFFF /* WaitingRoomViewController.swift */,
 				DEB4E37A2B7C1C16005FBFFF /* GameViewController.swift */,
+				DEAE04DE2B97BC350003B6AB /* TaskViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				DE95AC5B2B6C50AB001122B8 /* RoomActivateTVC.swift in Sources */,
 				DE95AC5F2B6C56CB001122B8 /* Extensions.swift in Sources */,
 				DE95AC622B6D640C001122B8 /* CommentsTVC.swift in Sources */,
+				DEAE04DF2B97BC350003B6AB /* TaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -92,5 +92,11 @@ class GameViewController: UIViewController {
     @IBAction func rejectBtnClicked(_ sender: Any) {
         // TODO: Will be updated with API
         print("Reject button clicked.")
+        if let taskVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "TaskVC") as? TaskViewController {
+            taskVC.modalPresentationStyle = .fullScreen
+            taskVC.configure(with: 3, name: "Musti", id: "1")
+            present(taskVC, animated: true, completion: nil)
+        }
     }
 }
