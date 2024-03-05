@@ -9,7 +9,11 @@ import UIKit
 
 class GameViewController: UIViewController {
 
-    @IBOutlet weak var titleL: UILabel!
+    @IBOutlet weak var vsL: UILabel!
+    @IBOutlet weak var user1Img: UIImageView!
+    @IBOutlet weak var user1L: UILabel!
+    @IBOutlet weak var user2L: UILabel!
+    @IBOutlet weak var user2Img: UIImageView!
     @IBOutlet weak var gameCardV: UIView!
     @IBOutlet weak var questionTV: UITextView!
     @IBOutlet weak var buttonsV: UIView!
@@ -31,12 +35,21 @@ class GameViewController: UIViewController {
     private func setView() {
         view.backgroundColor = .appColor
     
-        titleL.text = "DAREVIA"
-        titleL.textColor = .appWhite
-        titleL.font = UIFont.boldSystemFont(ofSize: 20)
+        vsL.text = "VS" // TODO: Lang
+        vsL.textColor = .appWhite
+        vsL.font = .boldSystemFont(ofSize: 15)
+        
+        user1L.text = "user1" // TODO: Lang
+        user1L.textColor = .appWhite
+        user1L.font = .systemFont(ofSize: 15)
+        
+        user2L.text = "user2" // TODO: Lang
+        user2L.textColor = .appWhite
+        user2L.font = .systemFont(ofSize: 15)
         
         gameCardV.backgroundColor = .appBluredColor
         gameCardV.applySoftCornerRadius()
+        
         
         questionTV.textColor = .appDark
         questionTV.font = UIFont.boldSystemFont(ofSize: 19)
@@ -53,7 +66,7 @@ class GameViewController: UIViewController {
         rejectBtnV.addBorder(width: 1, color: .appWhite)
         rejectBtnV.applyCornerRadius()
         
-        rejectL.text = "Not now :(" // TODO: Lang
+        rejectL.text = "Fail" // TODO: Lang
         rejectL.textColor =  .appWhite
         rejectL.font = .systemFont(ofSize: 20)
         
