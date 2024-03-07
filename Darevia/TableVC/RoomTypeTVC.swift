@@ -30,7 +30,7 @@ class RoomTypeTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cellTitleL.text = "Games".localized() // TODO: Lang
+        cellTitleL.text = "Games".localized() 
         cellTitleL.textColor = .appColor
         cellTitleL.font = UIFont.boldSystemFont(ofSize: 16)
         roomTypeCV.register(RoomTypeCVC.nib(), forCellWithReuseIdentifier: RoomTypeCVC.identifier)

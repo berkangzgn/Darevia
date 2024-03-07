@@ -53,7 +53,7 @@ class GameDetailViewController: UIViewController {
         createGameBtnV.backgroundColor = .appColor
         createGameBtnV.applyCornerRadius()
         
-        createGameBtn.setTitle("Create Game".localized(), for: .normal) // TODO: Lang change
+        createGameBtn.setTitle("Create Game".localized(), for: .normal)
         createGameBtn.titleLabel?.font = .boldSystemFont(ofSize: 20)
         createGameBtn.setTitleColorExt(.appWhite)
     }

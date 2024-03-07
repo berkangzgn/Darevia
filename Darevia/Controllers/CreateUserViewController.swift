@@ -108,7 +108,7 @@ class CreateUserViewController: UIViewController {
     }
     
     @IBAction func gender2Clicked(_ sender: Any) {
-        gender = "Woman".localized() //  TODO: Lang
+        gender = "Woman".localized()
         gender2V.backgroundColor = .appColor
         gender2L.textColor = .appWhite
         
@@ -143,15 +143,15 @@ class CreateUserViewController: UIViewController {
                     present(waitingRoomVC, animated: true, completion: nil)
                 }
             } else {
-                let alertController = UIAlertController(title: "Empty Space".localized(), message: "Please select your gender!".localized(), preferredStyle: .alert) // TODO: Lang
+                let alertController = UIAlertController(title: "Empty Space".localized(), message: "Please select your gender!".localized(), preferredStyle: .alert) 
 
                 let confirmAction = UIAlertAction(title: "OK".localized(), style: .default, handler: nil)
-                alertController.addAction(confirmAction) // TODO: Lang
+                alertController.addAction(confirmAction) 
 
                 present(alertController, animated: true, completion: nil)
             }
         } else {
-            let alertController = UIAlertController(title: "Empty Space".localized(), message: "Please enter your name!".localized(), preferredStyle: .alert) // TODO: Lang
+            let alertController = UIAlertController(title: "Empty Space".localized(), message: "Please enter your name!".localized(), preferredStyle: .alert) 
 
             let confirmAction = UIAlertAction(title: "OK".localized(), style: .default, handler: nil)
             alertController.addAction(confirmAction)

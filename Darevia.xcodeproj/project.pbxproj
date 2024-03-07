@@ -20,6 +20,7 @@
 		DE95AC672B6D677E001122B8 /* CommentCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE95AC652B6D677E001122B8 /* CommentCVC.xib */; };
 		DEA84AE02B8BB5C5002CE6CB /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA84ADF2B8BB5C5002CE6CB /* CreateUserViewController.swift */; };
 		DEAE04DF2B97BC350003B6AB /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE04DE2B97BC350003B6AB /* TaskViewController.swift */; };
+		DEAE04E62B9A63820003B6AB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEAE04E82B9A63820003B6AB /* Localizable.strings */; };
 		DEB4E36A2B715F03005FBFFF /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E3692B715F03005FBFFF /* GameDetailViewController.swift */; };
 		DEB4E36D2B71635A005FBFFF /* DetailCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E36B2B71635A005FBFFF /* DetailCVC.swift */; };
 		DEB4E36E2B71635A005FBFFF /* DetailCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB4E36C2B71635A005FBFFF /* DetailCVC.xib */; };
@@ -73,8 +74,9 @@
 		DEA84ADF2B8BB5C5002CE6CB /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		DEAE04DE2B97BC350003B6AB /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		DEAE04E02B98DC0C0003B6AB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
-		DEAE04E12B98DC240003B6AB /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
 		DEAE04E32B9A5B8C0003B6AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		DEAE04E72B9A63820003B6AB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DEAE04EA2B9A63890003B6AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DEB4E3692B715F03005FBFFF /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		DEB4E36B2B71635A005FBFFF /* DetailCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCVC.swift; sourceTree = "<group>"; };
 		DEB4E36C2B71635A005FBFFF /* DetailCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCVC.xib; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				DE95AC5E2B6C56CB001122B8 /* Extensions.swift */,
+				DEAE04E82B9A63820003B6AB /* Localizable.strings */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,7 +345,6 @@
 				en,
 				Base,
 				tr,
-				"en-GB",
 			);
 			mainGroup = DEDF43222B6A963E0085B011;
 			productRefGroup = DEDF432C2B6A963E0085B011 /* Products */;
@@ -362,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEDF433B2B6A96410085B011 /* LaunchScreen.storyboard in Resources */,
+				DEAE04E62B9A63820003B6AB /* Localizable.strings in Resources */,
 				DE95AC5C2B6C50AB001122B8 /* RoomActivateTVC.xib in Resources */,
 				DE7403E82B6F10BA00C84DE5 /* GamesCVC.xib in Resources */,
 				DEB4E3742B73D3EC005FBFFF /* UserListTVC.xib in Resources */,
@@ -450,12 +453,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DEAE04E82B9A63820003B6AB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEAE04E72B9A63820003B6AB /* tr */,
+				DEAE04EA2B9A63890003B6AB /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DEDF43342B6A963E0085B011 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DEDF43352B6A963E0085B011 /* Base */,
 				DEAE04E02B98DC0C0003B6AB /* tr */,
-				DEAE04E12B98DC240003B6AB /* en-GB */,
 				DEAE04E32B9A5B8C0003B6AB /* en */,
 			);
 			name = Main.storyboard;

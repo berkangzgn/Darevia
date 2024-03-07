@@ -34,9 +34,9 @@ class MainViewController: UIViewController {
     
     @objc private func enterCodeButtonClicked() {
         // TODO: To be edited after api connection
-        let alertController = UIAlertController(title: "App in developed.".localized(), message: "Room check will take place after the API connection. Therefore we redirect you to another page for now.".localized(), preferredStyle: .alert) // TODO: Lang
+        let alertController = UIAlertController(title: "App in developed.".localized(), message: "Room check will take place after the API connection. Therefore we redirect you to another page for now.".localized(), preferredStyle: .alert) 
 
-        let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in // TODO: Lang
+        let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in 
             if let gameVC = UIStoryboard(name: "Main", bundle: nil)
                 .instantiateViewController(withIdentifier: "GameVC") as? GameViewController {
                 gameVC.modalPresentationStyle = .fullScreen

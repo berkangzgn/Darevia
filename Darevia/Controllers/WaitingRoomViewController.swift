@@ -45,24 +45,24 @@ class WaitingRoomViewController: UIViewController {
         playersTV.delegate = self
         playersTV.dataSource = self
         
-        startGameDescL.text = "Waiting for other players.".localized() // TODO: Lang
+        startGameDescL.text = "Waiting for other players.".localized() 
         startGameDescL.font = UIFont.systemFont(ofSize: 13)
         
         startGameV.backgroundColor = .appColor
         startGameV.applyCornerRadius()
         
-        startGameBtn.setTitle("Start Game".localized(), for: .normal) // TODO: Lang
+        startGameBtn.setTitle("Start Game".localized(), for: .normal) 
         startGameBtn.setTitleColorExt(.appWhite)
         startGameBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         
-        inviteCodeL.text = "Game Code: \(SharedData.shared.gameRoom[0].roomID)".localized() // TODO: Lang
+        inviteCodeL.text = "Game Code:".localized() + " \(SharedData.shared.gameRoom[0].roomID)" 
         inviteCodeL.textColor = .appWhite
         inviteCodeL.font = UIFont.boldSystemFont(ofSize: 15)
         
         inviteBtnV.backgroundColor = .appWhite
         inviteBtnV.applyCornerRadius()
         inviteBtn.setTitleColorExt(.appColor)
-        inviteBtn.setTitle("INVITE".localized(), for: .normal) // TODO: Lang
+        inviteBtn.setTitle("INVITE".localized(), for: .normal) 
         inviteBtn.titleLabel?.font = .boldSystemFont(ofSize: 20)
     }
     
@@ -76,7 +76,7 @@ class WaitingRoomViewController: UIViewController {
     }
     
     @IBAction func inviteBtnClicked(_ sender: UIButton) {
-        let shareText = "Why don't we see you among us?".localized() // TODO: Lang
+        let shareText = "Why don't we see you among us?".localized() 
         let shareURL = URL(string: "https://www.example.com")
 
         let activityViewController = UIActivityViewController(activityItems: [shareText, shareURL as Any], applicationActivities: nil)
@@ -85,14 +85,14 @@ class WaitingRoomViewController: UIViewController {
     }
     
     @IBAction func backBtnClicked(_ sender: Any) {
-        let alertController = UIAlertController(title: "Delete Game".localized(), message: "Are you sure?".localized(), preferredStyle: .alert) // TODO: Lang
+        let alertController = UIAlertController(title: "Delete Game".localized(), message: "Are you sure?".localized(), preferredStyle: .alert) 
 
-        let confirmAction = UIAlertAction(title: "Yes".localized(), style: .default) { (_) in // TODO: Lang
+        let confirmAction = UIAlertAction(title: "Yes".localized(), style: .default) { (_) in 
             self.dismiss(animated: true, completion: nil)
         }
         alertController.addAction(confirmAction)
 
-        let cancelAction = UIAlertAction(title: "No".localized(), style: .cancel) // TODO: Lang
+        let cancelAction = UIAlertAction(title: "No".localized(), style: .cancel) 
         alertController.addAction(cancelAction)
 
         present(alertController, animated: true, completion: nil)
@@ -107,7 +107,7 @@ extension WaitingRoomViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = playersTV.dequeueReusableCell(withIdentifier: UserListTVC.identifier, for: indexPath) as! UserListTVC
         cell.userNameL.text = SharedData.shared.gameRoomUsers[indexPath.row].userName
-        cell.scoreL.text = "\(SharedData.shared.gameRoomUsers[indexPath.row].score) point 🥳".localized() // TODO: Lang
+        cell.scoreL.text = "\(SharedData.shared.gameRoomUsers[indexPath.row].score) point 🥳".localized() 
         return cell
     }
 }

@@ -58,7 +58,7 @@ class GameViewController: UIViewController {
         approveBtnV.addBorder(width: 1, color: .appWhite)
         approveBtnV.applyCornerRadius()
         
-        approveL.text = "Done".localized() // TODO: Lang
+        approveL.text = "Done".localized() 
         approveL.textColor =  .appWhite
         approveL.font = UIFont.boldSystemFont(ofSize: 20)
         
@@ -66,7 +66,7 @@ class GameViewController: UIViewController {
         rejectBtnV.addBorder(width: 1, color: .appWhite)
         rejectBtnV.applyCornerRadius()
         
-        rejectL.text = "Fail".localized() // TODO: Lang
+        rejectL.text = "Fail".localized() 
         rejectL.textColor =  .appWhite
         rejectL.font = .systemFont(ofSize: 20)
         
@@ -76,7 +76,7 @@ class GameViewController: UIViewController {
             
         } else if statu == 1 { // Answerer
             buttonsV.isHidden = true
-            questionTV.text = "It's your time!".localized() // TODO: Lang
+            questionTV.text = "It's your time!".localized() 
             
         } else { // Other player
             buttonsV.isHidden = true

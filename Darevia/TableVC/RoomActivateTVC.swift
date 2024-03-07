@@ -36,7 +36,7 @@ class RoomActivateTVC: UITableViewCell {
         playNowV.applyCornerRadius()
         playNowV.backgroundColor = .appColor
         
-        playNowL.text = "Play Now"
+        playNowL.text = "Play Now".localized()
         playNowL.font = UIFont.boldSystemFont(ofSize: 18)
         playNowL.textColor = .appWhite
         
@@ -47,7 +47,7 @@ class RoomActivateTVC: UITableViewCell {
         enterGameBtn.tintColor = .appWhite
         enterGameImg.tintColor = .appWhite
         
-        enterCodeTF.placeholder = "Enter Code"
+        enterCodeTF.placeholder = "Enter Code".localized()
         enterCodeTF.font = UIFont.boldSystemFont(ofSize: 18)
         enterCodeTF.setPlaceholderColor(.appColor)
         enterCodeTF.textColor = .appColor

@@ -68,8 +68,8 @@ extension UITextField: UITextFieldDelegate {
 }
 
 extension String {
-    func localized(with comment: String = "") -> String {
-        return NSLocalizedString(self, comment: comment)
+    func localized() -> String {
+        return NSLocalizedString(self, comment: "")
     }
 }
 
