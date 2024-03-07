@@ -74,6 +74,7 @@
 		DEAE04DE2B97BC350003B6AB /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		DEAE04E02B98DC0C0003B6AB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		DEAE04E12B98DC240003B6AB /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		DEAE04E32B9A5B8C0003B6AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		DEB4E3692B715F03005FBFFF /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		DEB4E36B2B71635A005FBFFF /* DetailCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCVC.swift; sourceTree = "<group>"; };
 		DEB4E36C2B71635A005FBFFF /* DetailCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCVC.xib; sourceTree = "<group>"; };
@@ -455,6 +456,7 @@
 				DEDF43352B6A963E0085B011 /* Base */,
 				DEAE04E02B98DC0C0003B6AB /* tr */,
 				DEAE04E12B98DC240003B6AB /* en-GB */,
+				DEAE04E32B9A5B8C0003B6AB /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

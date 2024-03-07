@@ -128,7 +128,6 @@
 /* Class = "UILabel"; text = "Label"; ObjectID = "wN3-A0-Wco"; */
 "wN3-A0-Wco.text" = "Label";
 
-
 "App in developed." = "App in developed.";
 "Room check will take place after the API connection. Therefore we redirect you to another page for now." = "Room check will take place after the API connection. Therefore we redirect you to another page for now.";
 "OK" = "OK";
