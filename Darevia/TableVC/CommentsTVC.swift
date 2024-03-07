@@ -26,7 +26,7 @@ class CommentsTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cellTitleL.text = "Comments about the games" // TODO: Lang
+        cellTitleL.text = "Comments about the games".localized() // TODO: Lang
         cellTitleL.textColor = .appColor
         cellTitleL.font = UIFont.boldSystemFont(ofSize: 16)
         commentCV.register(CommentCVC.nib(), forCellWithReuseIdentifier: CommentCVC.identifier)

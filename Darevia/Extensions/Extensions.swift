@@ -67,6 +67,12 @@ extension UITextField: UITextFieldDelegate {
     }
 }
 
+extension String {
+    func localized(with comment: String = "") -> String {
+        return NSLocalizedString(self, comment: comment)
+    }
+}
+
 extension UIColor {
     static let appColor = UIColor(red: 235/255, green: 68/255, blue: 90/255, alpha: 1)
     static let appBluredColor = UIColor(red: 223/255, green: 126/255, blue: 136/255, alpha: 1)

@@ -53,7 +53,7 @@ class TaskViewController: UIViewController, TaskConfigurable {
         pointNumberL.textColor = .appWhite
         pointNumberL.font = .boldSystemFont(ofSize: 25)
         
-        pointTxtL.text = "points" // TODO: Lang
+        pointTxtL.text = "point".localized() // TODO: Lang
         pointTxtL.textColor = .appWhite
         pointTxtL.font = .systemFont(ofSize: 15)
         
@@ -76,33 +76,33 @@ class TaskViewController: UIViewController, TaskConfigurable {
         switch userOption {
         case 1: // Assign time
             pointV.isHidden = true
-            statuL.text = " \(playerName!) is giving you a task!" // TODO: Lang, to be done with api
-            taskL.text = "Put your phone away. Do your task." // TODO: Lang
+            statuL.text = " \(playerName!) is giving you a task!".localized() // TODO: Lang, to be done with api
+            taskL.text = "Put your phone away. Do your task.".localized() // TODO: Lang
             bangBtnV.isHidden = true
             bangBtn.isUserInteractionEnabled = true
         
         case 2: // Watch time
             pointV.isHidden = false
             statuL.text = ""
-            taskL.text = " \(playerName!)'s Turn to Assign!" // TODO: Lang, to be done with api
+            taskL.text = " \(playerName!)'s Turn to Assign!".localized() // TODO: Lang, to be done with api
             bangBtnV.backgroundColor = .appBluredColor
             bangBtnV.isHidden = false
             bangBtn.isUserInteractionEnabled = false
-            bangBtnL.text = " \(playerName!) is Assigning" // TODO: To be done with api
+            bangBtnL.text = " \(playerName!) is Assigning".localized() // TODO: To be done with api
         
         case 3: // Bang time
             pointV.isHidden = false
-            statuL.text = "Challenging \(playerName!)" // TODO: Lang, to be done with api
-            taskL.text = "Give a task NOW!" // TODO: Lang
+            statuL.text = "Challenging \(playerName!)".localized() // TODO: Lang, to be done with api
+            taskL.text = "Give a task NOW!".localized() // TODO: Lang
             bangBtnV.backgroundColor = .appColor
             bangBtnV.isHidden = false
             bangBtn.isUserInteractionEnabled = true
             bangBtnL.text = "Bang!"
             
         default:
-            let alertController = UIAlertController(title: "Error", message: "We encountered an unexpected error. We will fix it and return as soon as possible.", preferredStyle: .alert) // TODO: Lang
+            let alertController = UIAlertController(title: "Error".localized(), message: "We encountered an unexpected error. We will fix it and return as soon as possible.".localized(), preferredStyle: .alert) // TODO: Lang
 
-            let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in // TODO: Lang
+            let confirmAction = UIAlertAction(title: "OK".localized(), style: .default) { (_) in // TODO: Lang
                 self.dismiss(animated: true, completion: nil)
             }
             
@@ -130,9 +130,9 @@ class TaskViewController: UIViewController, TaskConfigurable {
             
         default:
             // TODO: To be tested. Giving error
-            let alertController = UIAlertController(title: "Error", message: "We encountered an unexpected error. We will fix it and return as soon as possible.", preferredStyle: .alert) // TODO: Lang
+            let alertController = UIAlertController(title: "Error".localized(), message: "We encountered an unexpected error. We will fix it and return as soon as possible.".localized(), preferredStyle: .alert) // TODO: Lang
 
-            let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in // TODO: Lang
+            let confirmAction = UIAlertAction(title: "OK".localized(), style: .default) { (_) in // TODO: Lang
                 self.dismiss(animated: true, completion: nil)
             }
             

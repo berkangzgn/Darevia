@@ -55,28 +55,28 @@ class CreateUserViewController: UIViewController {
         nameV.applyCornerRadius()
         nameV.addBorder(width: 2, color: .appColor)
         
-        nameTF.placeholder = "Please enter your name..." //  TODO: Lang
+        nameTF.placeholder = "Please enter your name...".localized() //  TODO: Lang
         nameTF.setPlaceholderColor(.appColor)
         nameTF.font = .systemFont(ofSize: 17)
         nameTF.limitCharacterCount(15)
         nameTF.textColor = .appColor
         nameTF.addDoneButtonToKeyboard(target: self, action: #selector(doneButtonTapped))
         
-        gender1L.text = "Man" //  TODO: Lang
+        gender1L.text = "Man".localized() //  TODO: Lang
         gender1L.textColor = .appColor
         gender1L.font = .systemFont(ofSize: 17)
         gender1V.backgroundColor = .appWhite
         gender1V.applyCornerRadius()
         gender1V.addBorder(width: 2, color: .appColor)
         
-        gender2L.text = "Woman" //  TODO: Lang
+        gender2L.text = "Woman".localized() //  TODO: Lang
         gender2L.textColor = .appColor
         gender2L.font = .systemFont(ofSize: 17)
         gender2V.backgroundColor = .appWhite
         gender2V.applyCornerRadius()
         gender2V.addBorder(width: 2, color: .appColor)
         
-        gender3L.text = "Other" //  TODO: Lang
+        gender3L.text = "Other".localized() //  TODO: Lang
         gender3L.textColor = .appColor
         gender3L.font = .systemFont(ofSize: 17)
         gender3V.backgroundColor = .appWhite
@@ -86,7 +86,7 @@ class CreateUserViewController: UIViewController {
         createUserBtnV.backgroundColor = .appColor
         createUserBtnV.applyCornerRadius()
         
-        createUserL.text = "Create" //  TODO: Lang
+        createUserL.text = "Create".localized() //  TODO: Lang
         createUserL.font = .boldSystemFont(ofSize: 17)
         createUserL.textColor =  .appWhite
     }
@@ -96,7 +96,7 @@ class CreateUserViewController: UIViewController {
     }
     
     @IBAction func gender1Clicked(_ sender: Any) {
-        gender = "Man" //  TODO: Lang
+        gender = "Man".localized() //  TODO: Lang
         gender1V.backgroundColor = .appColor
         gender1L.textColor = .appWhite
         
@@ -108,7 +108,7 @@ class CreateUserViewController: UIViewController {
     }
     
     @IBAction func gender2Clicked(_ sender: Any) {
-        gender = "Woman" //  TODO: Lang
+        gender = "Woman".localized() //  TODO: Lang
         gender2V.backgroundColor = .appColor
         gender2L.textColor = .appWhite
         
@@ -120,7 +120,7 @@ class CreateUserViewController: UIViewController {
     }
     
     @IBAction func gender3Clicked(_ sender: Any) {
-        gender = "Other" //  TODO: Lang
+        gender = "Other".localized() //  TODO: Lang
         gender3V.backgroundColor = .appColor
         gender3L.textColor = .appWhite
         
@@ -143,17 +143,17 @@ class CreateUserViewController: UIViewController {
                     present(waitingRoomVC, animated: true, completion: nil)
                 }
             } else {
-                let alertController = UIAlertController(title: "Empty Space", message: "Please select your gender!", preferredStyle: .alert) // TODO: Lang
+                let alertController = UIAlertController(title: "Empty Space".localized(), message: "Please select your gender!".localized(), preferredStyle: .alert) // TODO: Lang
 
-                let confirmAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(confirmAction)
+                let confirmAction = UIAlertAction(title: "OK".localized(), style: .default, handler: nil)
+                alertController.addAction(confirmAction) // TODO: Lang
 
                 present(alertController, animated: true, completion: nil)
             }
         } else {
-            let alertController = UIAlertController(title: "Empty Space", message: "Please enter your name!", preferredStyle: .alert) // TODO: Lang
+            let alertController = UIAlertController(title: "Empty Space".localized(), message: "Please enter your name!".localized(), preferredStyle: .alert) // TODO: Lang
 
-            let confirmAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let confirmAction = UIAlertAction(title: "OK".localized(), style: .default, handler: nil)
             alertController.addAction(confirmAction)
 
             present(alertController, animated: true, completion: nil)
