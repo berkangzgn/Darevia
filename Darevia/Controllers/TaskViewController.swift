@@ -8,15 +8,15 @@
 import UIKit
 
 protocol TaskConfigurable {
-    func configure(with option: Int, name: String, id: String)
+    func configure(with option: Int, id: Int)
 }
 
 class TaskViewController: UIViewController, TaskConfigurable {
     
-    @IBOutlet weak var topV: UIView!
     @IBOutlet weak var pointV: UIView!
     @IBOutlet weak var pointNumberL: UILabel!
     @IBOutlet weak var pointTxtL: UILabel!
+    @IBOutlet weak var taskV: UIView!
     @IBOutlet weak var statuL: UILabel!
     @IBOutlet weak var statuImg: UIImageView!
     @IBOutlet weak var taskL: UILabel!
@@ -26,7 +26,7 @@ class TaskViewController: UIViewController, TaskConfigurable {
     
     var selectedOption: Int?
     var playerName: String?
-    var playerId: String?
+    var playerID: Int?
     var userOption: Int?
     
     override func viewDidLoad() {
@@ -35,32 +35,33 @@ class TaskViewController: UIViewController, TaskConfigurable {
         self.setView()
         
         if let selectedOption = selectedOption,
-            let playerName = playerName,
-            let playerId = playerId {
-            configure(with: selectedOption, name: playerName, id: playerId)
+            let playerId = playerID {
+            configure(with: selectedOption, id: playerId)
         }
     }
     
     private func setView() {
-//        topV.backgroundColor = .appColor
-//        topV.applyBottomCornerRadius()
+        view.backgroundColor = .appColor
+        
+        taskV.backgroundColor = .appWhite
+        taskV.applyTopCornerRadius()
         
         pointV.makeViewCircular()
         pointV.backgroundColor = .appColor
         pointV.addBorder(width: 2, color: .appWhite)
         
-        pointNumberL.text = "30" // TODO: To be done with api
+        pointNumberL.text = "30" // TODO: Must be done with api
         pointNumberL.textColor = .appWhite
-        pointNumberL.font = .boldSystemFont(ofSize: 25)
+        pointNumberL.font = .boldSystemFont(ofSize: 30)
         
         pointTxtL.text = "point".localized() 
         pointTxtL.textColor = .appWhite
-        pointTxtL.font = .systemFont(ofSize: 15)
+        pointTxtL.font = .systemFont(ofSize: 17)
         
         statuL.textColor = .appDark
         statuL.font = .boldSystemFont(ofSize: 20)
         
-//        statuImg.image =  TODO: To be done with api
+        statuImg.image = UIImage(named: "\(playerID ?? 3).png")
         
         taskL.textColor = .appDark
         taskL.font = .systemFont(ofSize: 15)
@@ -69,9 +70,6 @@ class TaskViewController: UIViewController, TaskConfigurable {
         bangBtn.setTitle("", for: .normal)
         bangBtnL.textColor = .appWhite
         bangBtnL.font = .boldSystemFont(ofSize: 20)
-        
-        pointNumberL.textColor = .appWhite
-        pointNumberL.font = .boldSystemFont(ofSize: 20)
         
         switch userOption {
         case 1: // Assign time
@@ -111,22 +109,22 @@ class TaskViewController: UIViewController, TaskConfigurable {
         }
     }
     
-    func configure(with option: Int, name: String, id: String) {
+    func configure(with option: Int, id: Int) {
         switch option {
         case 1: // Assign time
             userOption = 1
-            playerName = name
-            playerId = id
+            playerName = SharedData.shared.gameRoomUsers[id].userName
+            playerID = id
         
         case 2: // Watch time
             userOption = 2
-            playerName = name
-            playerId = id
+            playerName = SharedData.shared.gameRoomUsers[id].userName
+            playerID = id
         
         case 3: // Bang time
             userOption = 3
-            playerName = name
-            playerId = id
+            playerName = SharedData.shared.gameRoomUsers[id].userName
+            playerID = id
             
         default:
             // TODO: To be tested. Giving error

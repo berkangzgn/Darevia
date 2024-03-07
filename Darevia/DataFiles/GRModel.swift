@@ -114,9 +114,9 @@ class SharedData {
         self.comments = [comment1, comment2, comment3, comment4, comment5]
         
         let user1 = User(userID: "1", userName: "John", gender: "Man", roomID: "1", score: 0)
-        let user2 = User(userID: "1", userName: "Abdullah", gender: "Man", roomID: "1", score: 0)
-        let user3 = User(userID: "1", userName: "Xio", gender: "Woman", roomID: "1", score: 0)
-        let user4 = User(userID: "1", userName: "Afreen", gender: "Woman", roomID: "1", score: 0)
+        let user2 = User(userID: "2", userName: "Abdullah", gender: "Man", roomID: "1", score: 0)
+        let user3 = User(userID: "3", userName: "Xio", gender: "Woman", roomID: "1", score: 0)
+        let user4 = User(userID: "4", userName: "Afreen", gender: "Woman", roomID: "1", score: 0)
         
         self.gameRoomUsers = [user1, user2, user3, user4]
         

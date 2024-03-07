@@ -42,10 +42,12 @@ class GameViewController: UIViewController {
         user1L.text = "user1"
         user1L.textColor = .appWhite
         user1L.font = .systemFont(ofSize: 15)
+        user1Img.image = UIImage(named: "1.png")
         
         user2L.text = "user2"
         user2L.textColor = .appWhite
         user2L.font = .systemFont(ofSize: 15)
+        user2Img.image = UIImage(named: "2.png")
         
         gameCardV.backgroundColor = .appBluredColor
         gameCardV.applySoftCornerRadius()
@@ -95,7 +97,7 @@ class GameViewController: UIViewController {
         if let taskVC = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "TaskVC") as? TaskViewController {
             taskVC.modalPresentationStyle = .fullScreen
-            taskVC.configure(with: 3, name: "Musti", id: "1")
+            taskVC.configure(with: 3, id: 2) // TODO: Must be done with api
             present(taskVC, animated: true, completion: nil)
         }
     }

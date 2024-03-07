@@ -25,6 +25,7 @@ class CommentCVC: UICollectionViewCell {
         self.userName.text = model.commenterUser
         self.comment.text = model.commentText
         self.userImg.tintColor = .appColor
+        self.userImg.image = UIImage(named: "\(model.commentID).png")
     }
 
 }

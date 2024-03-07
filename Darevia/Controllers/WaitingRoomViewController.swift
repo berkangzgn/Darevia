@@ -108,6 +108,7 @@ extension WaitingRoomViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = playersTV.dequeueReusableCell(withIdentifier: UserListTVC.identifier, for: indexPath) as! UserListTVC
         cell.userNameL.text = SharedData.shared.gameRoomUsers[indexPath.row].userName
         cell.scoreL.text = "\(SharedData.shared.gameRoomUsers[indexPath.row].score) point 🥳".localized() 
+        cell.userImgV.image = UIImage(named: "\(SharedData.shared.gameRoomUsers[indexPath.row].userID).png")
         return cell
     }
 }

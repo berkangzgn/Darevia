@@ -18,18 +18,9 @@ class UserListTVC: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.setView()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        self.setView()
     }
-    
-    private func setView() {
-        userImgV.makeCircular()
-        
-    }
-    
 }
