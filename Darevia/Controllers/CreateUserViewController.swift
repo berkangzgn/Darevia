@@ -96,7 +96,7 @@ class CreateUserViewController: UIViewController {
     }
     
     @IBAction func gender1Clicked(_ sender: Any) {
-        gender = "Man"
+        gender = "Man" //  TODO: Lang
         gender1V.backgroundColor = .appColor
         gender1L.textColor = .appWhite
         
@@ -108,7 +108,7 @@ class CreateUserViewController: UIViewController {
     }
     
     @IBAction func gender2Clicked(_ sender: Any) {
-        gender = "Woman"
+        gender = "Woman" //  TODO: Lang
         gender2V.backgroundColor = .appColor
         gender2L.textColor = .appWhite
         
@@ -120,7 +120,7 @@ class CreateUserViewController: UIViewController {
     }
     
     @IBAction func gender3Clicked(_ sender: Any) {
-        gender = "Other"
+        gender = "Other" //  TODO: Lang
         gender3V.backgroundColor = .appColor
         gender3L.textColor = .appWhite
         
@@ -143,7 +143,7 @@ class CreateUserViewController: UIViewController {
                     present(waitingRoomVC, animated: true, completion: nil)
                 }
             } else {
-                let alertController = UIAlertController(title: "Empty space", message: "Please select your gender!", preferredStyle: .alert) // TODO: Lang
+                let alertController = UIAlertController(title: "Empty Space", message: "Please select your gender!", preferredStyle: .alert) // TODO: Lang
 
                 let confirmAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(confirmAction)
@@ -151,7 +151,7 @@ class CreateUserViewController: UIViewController {
                 present(alertController, animated: true, completion: nil)
             }
         } else {
-            let alertController = UIAlertController(title: "Empty space", message: "Please enter your name!", preferredStyle: .alert) // TODO: Lang
+            let alertController = UIAlertController(title: "Empty Space", message: "Please enter your name!", preferredStyle: .alert) // TODO: Lang
 
             let confirmAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(confirmAction)

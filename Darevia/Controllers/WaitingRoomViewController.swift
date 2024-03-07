@@ -107,7 +107,7 @@ extension WaitingRoomViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = playersTV.dequeueReusableCell(withIdentifier: UserListTVC.identifier, for: indexPath) as! UserListTVC
         cell.userNameL.text = SharedData.shared.gameRoomUsers[indexPath.row].userName
-        cell.scoreL.text = "\(SharedData.shared.gameRoomUsers[indexPath.row].score) point 🥳"
+        cell.scoreL.text = "\(SharedData.shared.gameRoomUsers[indexPath.row].score) point 🥳" // TODO: Lang
         return cell
     }
 }

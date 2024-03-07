@@ -97,7 +97,7 @@ class TaskViewController: UIViewController, TaskConfigurable {
             bangBtnV.backgroundColor = .appColor
             bangBtnV.isHidden = false
             bangBtn.isUserInteractionEnabled = true
-            bangBtnL.text = "Bang!" // TODO: To be done with api
+            bangBtnL.text = "Bang!"
             
         default:
             let alertController = UIAlertController(title: "Error", message: "We encountered an unexpected error. We will fix it and return as soon as possible.", preferredStyle: .alert) // TODO: Lang

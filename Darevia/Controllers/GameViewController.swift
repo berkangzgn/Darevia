@@ -35,15 +35,15 @@ class GameViewController: UIViewController {
     private func setView() {
         view.backgroundColor = .appColor
     
-        vsL.text = "VS" // TODO: Lang
+        vsL.text = "VS"
         vsL.textColor = .appWhite
         vsL.font = .boldSystemFont(ofSize: 15)
         
-        user1L.text = "user1" // TODO: Lang
+        user1L.text = "user1"
         user1L.textColor = .appWhite
         user1L.font = .systemFont(ofSize: 15)
         
-        user2L.text = "user2" // TODO: Lang
+        user2L.text = "user2"
         user2L.textColor = .appWhite
         user2L.font = .systemFont(ofSize: 15)
         

@@ -72,6 +72,8 @@
 		DE95AC652B6D677E001122B8 /* CommentCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCVC.xib; sourceTree = "<group>"; };
 		DEA84ADF2B8BB5C5002CE6CB /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		DEAE04DE2B97BC350003B6AB /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		DEAE04E02B98DC0C0003B6AB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		DEAE04E12B98DC240003B6AB /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
 		DEB4E3692B715F03005FBFFF /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		DEB4E36B2B71635A005FBFFF /* DetailCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCVC.swift; sourceTree = "<group>"; };
 		DEB4E36C2B71635A005FBFFF /* DetailCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCVC.xib; sourceTree = "<group>"; };
@@ -338,6 +340,8 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
+				"en-GB",
 			);
 			mainGroup = DEDF43222B6A963E0085B011;
 			productRefGroup = DEDF432C2B6A963E0085B011 /* Products */;
@@ -449,6 +453,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DEDF43352B6A963E0085B011 /* Base */,
+				DEAE04E02B98DC0C0003B6AB /* tr */,
+				DEAE04E12B98DC240003B6AB /* en-GB */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -532,6 +539,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
