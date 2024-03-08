@@ -24,7 +24,7 @@
 		DEB4E36A2B715F03005FBFFF /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E3692B715F03005FBFFF /* GameDetailViewController.swift */; };
 		DEB4E36D2B71635A005FBFFF /* DetailCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E36B2B71635A005FBFFF /* DetailCVC.swift */; };
 		DEB4E36E2B71635A005FBFFF /* DetailCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB4E36C2B71635A005FBFFF /* DetailCVC.xib */; };
-		DEB4E3702B73C7FA005FBFFF /* WaitingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E36F2B73C7FA005FBFFF /* WaitingRoomViewController.swift */; };
+		DEB4E3702B73C7FA005FBFFF /* ListRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E36F2B73C7FA005FBFFF /* ListRoomViewController.swift */; };
 		DEB4E3732B73D3EC005FBFFF /* UserListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E3712B73D3EC005FBFFF /* UserListTVC.swift */; };
 		DEB4E3742B73D3EC005FBFFF /* UserListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB4E3722B73D3EC005FBFFF /* UserListTVC.xib */; };
 		DEB4E3792B7AC146005FBFFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E3782B7AC146005FBFFF /* MainViewController.swift */; };
@@ -80,7 +80,7 @@
 		DEB4E3692B715F03005FBFFF /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		DEB4E36B2B71635A005FBFFF /* DetailCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCVC.swift; sourceTree = "<group>"; };
 		DEB4E36C2B71635A005FBFFF /* DetailCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCVC.xib; sourceTree = "<group>"; };
-		DEB4E36F2B73C7FA005FBFFF /* WaitingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomViewController.swift; sourceTree = "<group>"; };
+		DEB4E36F2B73C7FA005FBFFF /* ListRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRoomViewController.swift; sourceTree = "<group>"; };
 		DEB4E3712B73D3EC005FBFFF /* UserListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTVC.swift; sourceTree = "<group>"; };
 		DEB4E3722B73D3EC005FBFFF /* UserListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTVC.xib; sourceTree = "<group>"; };
 		DEB4E3782B7AC146005FBFFF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 				DE7403E32B6F0E1B00C84DE5 /* GameTypeViewController.swift */,
 				DEB4E3692B715F03005FBFFF /* GameDetailViewController.swift */,
 				DEA84ADF2B8BB5C5002CE6CB /* CreateUserViewController.swift */,
-				DEB4E36F2B73C7FA005FBFFF /* WaitingRoomViewController.swift */,
+				DEB4E36F2B73C7FA005FBFFF /* ListRoomViewController.swift */,
 				DEB4E37A2B7C1C16005FBFFF /* GameViewController.swift */,
 				DEAE04DE2B97BC350003B6AB /* TaskViewController.swift */,
 			);
@@ -401,7 +401,7 @@
 			files = (
 				DEB4E36A2B715F03005FBFFF /* GameDetailViewController.swift in Sources */,
 				DE95AC582B6BCCF2001122B8 /* GRModel.swift in Sources */,
-				DEB4E3702B73C7FA005FBFFF /* WaitingRoomViewController.swift in Sources */,
+				DEB4E3702B73C7FA005FBFFF /* ListRoomViewController.swift in Sources */,
 				DE95AC662B6D677E001122B8 /* CommentCVC.swift in Sources */,
 				DEDF43692B6A9C3E0085B011 /* RoomTypeTVC.swift in Sources */,
 				DE7403E42B6F0E1B00C84DE5 /* GameTypeViewController.swift in Sources */,

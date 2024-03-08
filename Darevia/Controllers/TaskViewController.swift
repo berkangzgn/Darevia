@@ -142,5 +142,12 @@ class TaskViewController: UIViewController, TaskConfigurable {
     @IBAction func bangBtnClicked(_ sender: Any) {
         // TODO: Will be updated with API
         print("Bang button clicked.")
+        
+        if let listRoomVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "ListRoomVC") as? ListRoomViewController {
+            listRoomVC.modalPresentationStyle = .fullScreen
+            listRoomVC.configure(with: 2)
+            present(listRoomVC, animated: true, completion: nil)
+        }
     }
 }

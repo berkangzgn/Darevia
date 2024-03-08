@@ -1,3 +1,4 @@
+//"" = "";
 "App in developed." = "Uygulama geliştiriliyor.";
 "Room check will take place after the API connection. Therefore we redirect you to another page for now." = "Oda kontrolü API bağlantısından sonra gerçekleşecektir. Bu nedenle sizi şimdilik başka bir sayfaya yönlendiriyoruz.";
 "OK" = "Tamam";
@@ -36,3 +37,6 @@
 "Comments about the games" = "Oyunla ilgili yorumlar";
 "Play Now" = "Şimdi Oyna";
 "Enter Code" = "Kod Gir";
+"Leader Board" = "Liderlik Panosu";
+"CLOSE" = "KAPAT";
+"See you again 👋" = "Yakında tekrar görüşmek üzere 👋";

@@ -137,10 +137,11 @@ class CreateUserViewController: UIViewController {
                 let newUser = User(userID: "5", userName: "\(nameTF.text!)", gender: "\(self.gender)", roomID: "1", score: 0)
                 SharedData.shared.gameRoomUsers.append(newUser)
                 
-                if let waitingRoomVC = UIStoryboard(name: "Main", bundle: nil)
-                    .instantiateViewController(withIdentifier: "WaitingRoomVC") as? WaitingRoomViewController {
-                    waitingRoomVC.modalPresentationStyle = .fullScreen
-                    present(waitingRoomVC, animated: true, completion: nil)
+                if let listRoomVC = UIStoryboard(name: "Main", bundle: nil)
+                    .instantiateViewController(withIdentifier: "ListRoomVC") as? ListRoomViewController {
+                    listRoomVC.modalPresentationStyle = .fullScreen
+                    listRoomVC.configure(with: 1)
+                    present(listRoomVC, animated: true, completion: nil)
                 }
             } else {
                 let alertController = UIAlertController(title: "Empty Space".localized(), message: "Please select your gender!".localized(), preferredStyle: .alert) 

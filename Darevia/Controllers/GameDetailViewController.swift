@@ -20,6 +20,7 @@ class GameDetailViewController: UIViewController {
     @IBOutlet weak var gameTitleL: UILabel!
     @IBOutlet weak var detailL: UILabel!
     @IBOutlet weak var detailTV: UITextView!
+    @IBOutlet weak var createGameBtnL: UILabel!
     @IBOutlet weak var createGameBtnV: UIView!
     @IBOutlet weak var createGameBtn: UIButton!
     
@@ -53,9 +54,11 @@ class GameDetailViewController: UIViewController {
         createGameBtnV.backgroundColor = .appColor
         createGameBtnV.applyCornerRadius()
         
-        createGameBtn.setTitle("Create Game".localized(), for: .normal)
-        createGameBtn.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        createGameBtn.setTitleColorExt(.appWhite)
+        createGameBtn.setTitle("", for: .normal)
+        
+        createGameBtnL.text = "Create Game".localized()
+        createGameBtnL.font = .boldSystemFont(ofSize: 17)
+        createGameBtnL.textColor = .appWhite
     }
     
     @IBAction func createGameClicked(_ sender: Any) {

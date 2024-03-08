@@ -106,10 +106,10 @@ class SharedData {
         self.gameType = [gameType1, gameType2, gameType3, gameType4, gameType5]
         
         let comment1 = Comments(commentID: "1", commenterUser: "TestUser1", commentText: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
-        let comment2 = Comments(commentID: "2", commenterUser: "TestUser1", commentText: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
-        let comment3 = Comments(commentID: "3", commenterUser: "TestUser1", commentText: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
-        let comment4 = Comments(commentID: "4", commenterUser: "TestUser1", commentText: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
-        let comment5 = Comments(commentID: "5", commenterUser: "TestUser1", commentText: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
+        let comment2 = Comments(commentID: "2", commenterUser: "TestUser2", commentText: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
+        let comment3 = Comments(commentID: "3", commenterUser: "TestUser3", commentText: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
+        let comment4 = Comments(commentID: "4", commenterUser: "TestUser4", commentText: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
+        let comment5 = Comments(commentID: "5", commenterUser: "TestUser5", commentText: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ")
         
         self.comments = [comment1, comment2, comment3, comment4, comment5]
         
