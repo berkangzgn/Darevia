@@ -134,8 +134,8 @@ class CreateUserViewController: UIViewController {
     @IBAction func createUserBtnClicked(_ sender: Any) {
         if nameTF.text != "" {
             if gender != "" {
-                let newUser = User(userID: "5", userName: "\(nameTF.text!)", gender: "\(self.gender)", roomID: "1", score: 0)
-                SharedData.shared.gameRoomUsers.append(newUser)
+                let newUser = User(userID: "1", userName: "\(nameTF.text!)", gender: "\(self.gender)", roomID: "1", score: 0)
+                SharedData.shared.game.roomUsers.append(newUser)
                 
                 if let listRoomVC = UIStoryboard(name: "Main", bundle: nil)
                     .instantiateViewController(withIdentifier: "ListRoomVC") as? ListRoomViewController {

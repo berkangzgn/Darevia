@@ -82,7 +82,7 @@ extension GameDetailViewController: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = detailCV.dequeueReusableCell(withReuseIdentifier: DetailCVC.identifier, for: indexPath) as! DetailCVC
-        cell.detailL.text = SharedData.shared.gameType[gameTypeID].questions![indexPath.row]
+        cell.detailL.text = SharedData.shared.gameType[gameTypeID].questions[indexPath.row]
         return cell
     }
     

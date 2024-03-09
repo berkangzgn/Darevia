@@ -22,12 +22,12 @@ class GameTypeViewController: UIViewController {
     
     private func setView() {
         titleL.text = "DAREVIA"
-        titleL.textColor = .appWhite
+        titleL.textColor = .appDark
         titleL.font = UIFont.boldSystemFont(ofSize: 20)
         
-        backBtnImg.tintColor = .appWhite
+        backBtnImg.tintColor = .appDark
         
-        view.backgroundColor = .appDark
+        view.backgroundColor = .appWhite
         
         gamesCV.register(GamesCVC.nib(), forCellWithReuseIdentifier: GamesCVC.identifier)
         gamesCV.delegate = self

@@ -22,7 +22,7 @@ class GamesCVC: UICollectionViewCell {
         
         gameNameL.textColor = .appWhite
         gameNameL.font = UIFont.boldSystemFont(ofSize: 16)
-        gameDetailL.textColor = .appWhite
+        gameDetailL.textColor = .appDark
         gameDetailL.font = .systemFont(ofSize: 14)
         gameImg.tintColor = .appWhite
         gameColoredV.applySoftCornerRadius()

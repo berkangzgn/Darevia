@@ -140,7 +140,6 @@ class ListRoomViewController: UIViewController, ListConfigurable {
     }
     
     @IBAction func startGameClicked(_ sender: Any) {
-        // TODO: API connection to be added
         if let gameVC = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "GameVC") as? GameViewController {
             gameVC.modalPresentationStyle = .fullScreen
@@ -159,7 +158,14 @@ class ListRoomViewController: UIViewController, ListConfigurable {
             present(activityViewController, animated: true, completion: nil)
             
         case 2: // Result
-            SharedData.shared.gameRoomUsers.removeLast()
+            SharedData.shared.game.roomUsers.removeLast()
+            SharedData.shared.arrayNo = 0
+            
+            
+            for index in 0..<SharedData.shared.game.roomUsers.count {
+                SharedData.shared.gameRoomUsers[index].score = 0
+            }
+
             
             if let mainVC = UIStoryboard(name: "Main", bundle: nil)
                 .instantiateViewController(withIdentifier: "MainVC") as? MainViewController {
@@ -196,14 +202,14 @@ class ListRoomViewController: UIViewController, ListConfigurable {
 
 extension ListRoomViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SharedData.shared.gameRoomUsers.count
+        return SharedData.shared.game.roomUsers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = playersTV.dequeueReusableCell(withIdentifier: UserListTVC.identifier, for: indexPath) as! UserListTVC
-        cell.userNameL.text = SharedData.shared.gameRoomUsers[indexPath.row].userName
-        cell.scoreL.text = "\(SharedData.shared.gameRoomUsers[indexPath.row].score) point".localized() + " 🥳"
-        cell.userImgV.image = UIImage(named: "\(SharedData.shared.gameRoomUsers[indexPath.row].userID).png")
+        cell.userNameL.text = SharedData.shared.game.roomUsers[indexPath.row].userName
+        cell.scoreL.text = "\(SharedData.shared.game.roomUsers[indexPath.row].score) point".localized() + " 🥳"
+        cell.userImgV.image = UIImage(named: "\(SharedData.shared.game.roomUsers[indexPath.row].userID).png")
         return cell
     }
 }
