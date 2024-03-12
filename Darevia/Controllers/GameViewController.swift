@@ -134,7 +134,7 @@ class GameViewController: UIViewController {
             watchUser2Img.image = UIImage(named: "\(SharedData.shared.game.roomUsers[SharedData.shared.game.gameArray[SharedData.shared.arrayNo].user2No - 1].userID).png")
             watchUser1NameL.text = "\(SharedData.shared.game.roomUsers[SharedData.shared.game.gameArray[SharedData.shared.arrayNo].user1No - 1].userName)"
             watchUser2NameL.text = "\(SharedData.shared.game.roomUsers[SharedData.shared.game.gameArray[SharedData.shared.arrayNo].user2No - 1].userName)"
-            watchDescL.text = "\(SharedData.shared.game.roomUsers[SharedData.shared.game.gameArray[SharedData.shared.arrayNo].user1No - 1].userName)" + " asks " + "\(SharedData.shared.game.roomUsers[SharedData.shared.game.gameArray[SharedData.shared.arrayNo].user2No - 1].userName)"
+            watchDescL.text = "\(SharedData.shared.game.roomUsers[SharedData.shared.game.gameArray[SharedData.shared.arrayNo].user1No - 1].userName) " + "asks".localized() + " \(SharedData.shared.game.roomUsers[SharedData.shared.game.gameArray[SharedData.shared.arrayNo].user2No - 1].userName)"
             
             let waitTime = DispatchTime.now() + .seconds(4)
             DispatchQueue.main.asyncAfter(deadline: waitTime) {
@@ -154,14 +154,7 @@ class GameViewController: UIViewController {
             assignL.text = "\(SharedData.shared.game.gameType.questions[SharedData.shared.arrayNo])"
             
         default:
-            let alertController = UIAlertController(title: "Error".localized(), message: "We encountered an unexpected error. We will fix it and return as soon as possible.".localized(), preferredStyle: .alert)
-
-            let confirmAction = UIAlertAction(title: "OK".localized(), style: .default) { (_) in
-                self.dismiss(animated: true, completion: nil)
-            }
-            
-            alertController.addAction(confirmAction)
-            present(alertController, animated: true, completion: nil)
+            showAlertBeforeReturnBack(title: "Error", message: "We encountered an unexpected error. We will fix it and return as soon as possible.")
         }
     }
     

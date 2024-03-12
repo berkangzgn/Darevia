@@ -96,7 +96,7 @@ class ListRoomViewController: UIViewController, ListConfigurable {
             tvBottomCons.isActive = true
             
         case 2: // Result
-            titleL.text = "Leader Board".localized() // TODO: Lang
+            titleL.text = "Leader Board".localized()
             inviteBtnL.text = "CLOSE".localized()
             startGameV.isHidden = true
             startGameDescL.isHidden = true
@@ -107,14 +107,7 @@ class ListRoomViewController: UIViewController, ListConfigurable {
             playersTV.bottomAnchor.constraint(equalTo: inviteV.topAnchor).isActive = true
             
         default:
-            let alertController = UIAlertController(title: "Error".localized(), message: "We encountered an unexpected error. We will fix it and return as soon as possible.".localized(), preferredStyle: .alert)
-
-            let confirmAction = UIAlertAction(title: "OK".localized(), style: .default) { (_) in
-                self.dismiss(animated: true, completion: nil)
-            }
-            
-            alertController.addAction(confirmAction)
-            present(alertController, animated: true, completion: nil)
+            showAlertBeforeReturnBack(title: "Error", message: "We encountered an unexpected error. We will fix it and return as soon as possible.")
         }
         
     }
@@ -128,15 +121,7 @@ class ListRoomViewController: UIViewController, ListConfigurable {
             selectedOption = 2
             
         default:
-            // TODO: To be tested. Giving error
-            let alertController = UIAlertController(title: "Error".localized(), message: "We encountered an unexpected error. We will fix it and return as soon as possible.".localized(), preferredStyle: .alert)
-
-            let confirmAction = UIAlertAction(title: "OK".localized(), style: .default) { (_) in
-                self.dismiss(animated: true, completion: nil)
-            }
-            
-            alertController.addAction(confirmAction)
-            present(alertController, animated: true, completion: nil)
+            showAlertBeforeReturnBack(title: "Error", message: "We encountered an unexpected error. We will fix it and return as soon as possible.")
         }
     }
     
@@ -175,29 +160,12 @@ class ListRoomViewController: UIViewController, ListConfigurable {
             }
             
         default:
-            let alertController = UIAlertController(title: "Error".localized(), message: "We encountered an unexpected error. We will fix it and return as soon as possible.".localized(), preferredStyle: .alert)
-
-            let confirmAction = UIAlertAction(title: "OK".localized(), style: .default) { (_) in
-                self.dismiss(animated: true, completion: nil)
-            }
-            
-            alertController.addAction(confirmAction)
-            present(alertController, animated: true, completion: nil)
+            showAlertBeforeReturnBack(title: "Error", message: "We encountered an unexpected error. We will fix it and return as soon as possible.")
         }
     }
     
     @IBAction func backBtnClicked(_ sender: Any) {
-        let alertController = UIAlertController(title: "Delete Game".localized(), message: "Are you sure?".localized(), preferredStyle: .alert) 
-
-        let confirmAction = UIAlertAction(title: "Yes".localized(), style: .default) { (_) in 
-            self.dismiss(animated: true, completion: nil)
-        }
-        alertController.addAction(confirmAction)
-
-        let cancelAction = UIAlertAction(title: "No".localized(), style: .cancel) 
-        alertController.addAction(cancelAction)
-
-        present(alertController, animated: true, completion: nil)
+        showAlertBeforeReturnBack(title: "Delete Game", message: "Are you sure?")
     }
 }
 

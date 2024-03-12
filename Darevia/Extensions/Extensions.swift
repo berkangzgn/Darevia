@@ -118,6 +118,25 @@ extension UIView {
     }
 }
 
+extension UIViewController {
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title.localized(), message: message.localized(), preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK".localized(), style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func showAlertBeforeReturnBack(title: String, message: String) {
+        let alertController = UIAlertController(title: title.localized(), message: message.localized(), preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "OK".localized(), style: .default) { (_) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        alertController.addAction(confirmAction)
+        present(alertController, animated: true, completion: nil)
+    }
+}
+
 extension UIImageView {
     func makeCircular() {
         self.layer.cornerRadius = self.frame.size.width / 2

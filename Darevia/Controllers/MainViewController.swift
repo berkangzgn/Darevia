@@ -12,6 +12,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var titleL: UILabel!
     @IBOutlet var menuTV: UITableView!
     
+    var gameRoomCode = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setView()
@@ -34,11 +36,13 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     // Button funcs
     @objc private func enterCodeButtonClicked() {
+        let cell = menuTV.dequeueReusableCell(withIdentifier: RoomActivateTVC.identifier) as! RoomActivateTVC
+        if cell.enterCodeTF.text!.count < 6 {
+            showAlert(title: "Error", message: "Please enter 6 digit code.")
+        } else {
             // MARK: Delete this warning, modify this function after the API connection.
-        let alertController = UIAlertController(title: "App in developed.".localized(), message: "Room check will take place after the API connection. Therefore we redirect you to another page for now.".localized(), preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
+            showAlert(title: "App in development.", message: "Room check'll take place after the API connection. Therefore we redirect you to another page for now.")
+        }
     }
     
     @objc private func playNowButtonClicked() {
@@ -51,12 +55,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     // After entering 6 characters, automatic orientation function
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            // MARK: Delete this warning, modify this function after the API connection.
+        
         if ((textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? "").count == 6 {
-            let alertController = UIAlertController(title: "App in developed.".localized(), message: "Room check will take place after the API connection. Therefore we redirect you to another page for now.".localized(), preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
+                // MARK: Delete this warning, modify this function after the API connection.
+            showAlert(title: "App in development.", message: "Room check'll take place after the API connection. Therefore we redirect you to another page for now.")
         }
 
         return true

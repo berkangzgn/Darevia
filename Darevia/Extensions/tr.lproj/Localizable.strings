@@ -1,6 +1,6 @@
 //"" = "";
-"App in developed." = "Uygulama geliştiriliyor.";
-"Room check will take place after the API connection. Therefore we redirect you to another page for now." = "Oda kontrolü API bağlantısından sonra gerçekleşecektir. Bu nedenle sizi şimdilik başka bir sayfaya yönlendiriyoruz.";
+"App in development." = "Uygulama geliştiriliyor.";
+"Room check'll take place after the API connection. Therefore we redirect you to another page for now." = "Oda kontrolü API bağlantısından sonra gerçekleşecektir. Bu nedenle sizi şimdilik başka bir sayfaya yönlendiriyoruz.";
 "OK" = "Tamam";
 "Create Game" = "Oyun Oluştur";
 "Please enter your name..." = "Lütfen adınızı girin...";
@@ -30,7 +30,7 @@
 "s Turn to Assign!" = "Görev Sırası Sende!";
 "is Assigning" = "Görevli";
 "Challenging" = " Meydan Oku";
-"Give a task NOW!" = "Hemen bir görev verin!";
+"Give a task NOW!" = "Hemen bir cevap verin!";
 "Error" = "Hata";
 "We encountered an unexpected error. We will fix it and return as soon as possible." = "Beklenmedik bir hata ile karşılaştık. Düzeltip en kısa sürede dönüş yapacağız.";
 "Games" = "Oyunlar";
@@ -40,3 +40,4 @@
 "Leader Board" = "Liderlik Panosu";
 "CLOSE" = "KAPAT";
 "See you again 👋" = "Yakında tekrar görüşmek üzere 👋";
+"Please enter 6 digit code." = "Lütfen 6 haneli kod girin.";

@@ -146,21 +146,10 @@ class CreateUserViewController: UIViewController {
                     present(listRoomVC, animated: true, completion: nil)
                 }
             } else {
-                let alertController = UIAlertController(title: "Empty Space".localized(), message: "Please select your gender!".localized(), preferredStyle: .alert) 
-
-                let confirmAction = UIAlertAction(title: "OK".localized(), style: .default, handler: nil)
-                alertController.addAction(confirmAction) 
-
-                present(alertController, animated: true, completion: nil)
+                showAlert(title: "Empty Space", message: "Please select your gender!")
             }
         } else {
-            let alertController = UIAlertController(title: "Empty Space".localized(), message: "Please enter your name!".localized(), preferredStyle: .alert) 
-
-            let confirmAction = UIAlertAction(title: "OK".localized(), style: .default, handler: nil)
-            alertController.addAction(confirmAction)
-
-            present(alertController, animated: true, completion: nil)
-            
+            showAlert(title: "Empty Space", message: "Please enter your name!")
         }
     }
     
