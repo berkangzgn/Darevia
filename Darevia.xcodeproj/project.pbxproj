@@ -28,7 +28,7 @@
 		DEB4E3742B73D3EC005FBFFF /* UserListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB4E3722B73D3EC005FBFFF /* UserListTVC.xib */; };
 		DEB4E3792B7AC146005FBFFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E3782B7AC146005FBFFF /* MainViewController.swift */; };
 		DEB4E37B2B7C1C16005FBFFF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4E37A2B7C1C16005FBFFF /* GameViewController.swift */; };
-		DEC78D452BA0EC8E00B4C0FE /* ScreenRecording.gif in Resources */ = {isa = PBXBuildFile; fileRef = DEC78D442BA0EC8E00B4C0FE /* ScreenRecording.gif */; };
+		DEC78D492BA0EF5700B4C0FE /* ScreenRecording.gif in Resources */ = {isa = PBXBuildFile; fileRef = DEC78D482BA0EF5700B4C0FE /* ScreenRecording.gif */; };
 		DEDF432F2B6A963E0085B011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF432E2B6A963E0085B011 /* AppDelegate.swift */; };
 		DEDF43362B6A963E0085B011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDF43342B6A963E0085B011 /* Main.storyboard */; };
 		DEDF43382B6A96410085B011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDF43372B6A96410085B011 /* Assets.xcassets */; };
@@ -84,7 +84,7 @@
 		DEB4E3722B73D3EC005FBFFF /* UserListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTVC.xib; sourceTree = "<group>"; };
 		DEB4E3782B7AC146005FBFFF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DEB4E37A2B7C1C16005FBFFF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		DEC78D442BA0EC8E00B4C0FE /* ScreenRecording.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ScreenRecording.gif; sourceTree = "<group>"; };
+		DEC78D482BA0EF5700B4C0FE /* ScreenRecording.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ScreenRecording.gif; sourceTree = "<group>"; };
 		DEDF432B2B6A963E0085B011 /* Darevia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Darevia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDF432E2B6A963E0085B011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEDF43352B6A963E0085B011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		DEC78D422BA0EB9E00B4C0FE /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				DEC78D442BA0EC8E00B4C0FE /* ScreenRecording.gif */,
+				DEC78D482BA0EF5700B4C0FE /* ScreenRecording.gif */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -379,7 +379,7 @@
 				DEDF43382B6A96410085B011 /* Assets.xcassets in Resources */,
 				DEDF43362B6A963E0085B011 /* Main.storyboard in Resources */,
 				DEDF436A2B6A9C3E0085B011 /* RoomTypeTVC.xib in Resources */,
-				DEC78D452BA0EC8E00B4C0FE /* ScreenRecording.gif in Resources */,
+				DEC78D492BA0EF5700B4C0FE /* ScreenRecording.gif in Resources */,
 				DE95AC632B6D640C001122B8 /* CommentsTVC.xib in Resources */,
 				DE95AC672B6D677E001122B8 /* CommentCVC.xib in Resources */,
 				DEDF43662B6A9C020085B011 /* RoomTypeCVC.xib in Resources */,
