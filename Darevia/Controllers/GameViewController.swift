@@ -108,7 +108,7 @@ class GameViewController: UIViewController {
         rejectL.textColor =  .appWhite
         rejectL.font = .systemFont(ofSize: 20)
         
-       
+        // Adjusting viewcontrols according to position in the game
         switch SharedData.shared.game.gameArray[SharedData.shared.arrayNo].missionType {
         case 1: // Bang time
             bangV.isHidden = false
@@ -164,6 +164,7 @@ class GameViewController: UIViewController {
         }
     }
     
+    // Adjusting viewcontrols according to position in the game 
     private func checkGame() {
         SharedData.shared.arrayNo += 1
         

@@ -91,12 +91,13 @@ class CreateUserViewController: UIViewController {
         createUserL.textColor =  .appWhite
     }
 
+    // Button funcs
     @IBAction func backBtnClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func gender1Clicked(_ sender: Any) {
-        gender = "Man".localized() //  TODO: Lang
+        gender = "Man"
         gender1V.backgroundColor = .appColor
         gender1L.textColor = .appWhite
         
@@ -108,7 +109,7 @@ class CreateUserViewController: UIViewController {
     }
     
     @IBAction func gender2Clicked(_ sender: Any) {
-        gender = "Woman".localized()
+        gender = "Woman"
         gender2V.backgroundColor = .appColor
         gender2L.textColor = .appWhite
         
@@ -120,7 +121,7 @@ class CreateUserViewController: UIViewController {
     }
     
     @IBAction func gender3Clicked(_ sender: Any) {
-        gender = "Other".localized() //  TODO: Lang
+        gender = "Other"
         gender3V.backgroundColor = .appColor
         gender3L.textColor = .appWhite
         
@@ -131,9 +132,10 @@ class CreateUserViewController: UIViewController {
         gender2L.textColor = .appColor
     }
     
+    // Create user validations
     @IBAction func createUserBtnClicked(_ sender: Any) {
-        if nameTF.text != "" {
-            if gender != "" {
+        if nameTF.text != "" { // Name validation
+            if gender != "Man" || gender != "Woman" || gender != "Other"  { // Gender validation
                 let newUser = User(userID: "1", userName: "\(nameTF.text!)", gender: "\(self.gender)", roomID: "1", score: 0)
                 SharedData.shared.game.roomUsers.append(newUser)
                 

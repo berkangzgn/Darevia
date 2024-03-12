@@ -49,14 +49,16 @@ struct GameType {
     let questions: [String]
     let points: [Int]
     let gameRoomColor: UIColor
+    let gameDesc: String
     
-    init(gameTypeID: String, gameTypeName: String, gameDetail: String, questions: [String], points: [Int], gameRoomColor: UIColor) {
+    init(gameTypeID: String, gameTypeName: String, gameDetail: String, questions: [String], points: [Int], gameRoomColor: UIColor, gameDesc: String) {
         self.gameTypeID = gameTypeID
         self.gameTypeName = gameTypeName
         self.gameDetail = gameDetail
         self.questions = questions
         self.points = points
         self.gameRoomColor = gameRoomColor
+        self.gameDesc = gameDesc
     }
 }
 
@@ -110,37 +112,64 @@ class SharedData {
     var game: Game
     var arrayNo: Int = 0
         
+    // MARK: 
+    
     private init() {
-        self.gameType = [GameType(gameTypeID: "1", gameTypeName: "Game 1", gameDetail: "2-4 players",
+        self.gameType = [GameType(gameTypeID: "1", 
+                                  gameTypeName: "Game 1",
+                                  gameDetail: "2-4 players",
                                   questions: ["Question1",
                                               "Question2",
                                               "Question3",
                                               "Question4",
-                                              "Question5"], points: [20, 20 , 20, 20, 20], gameRoomColor: .systemYellow), 
-                         GameType(gameTypeID: "2", gameTypeName: "Game 2", gameDetail: "2-4 players",
-                                                  questions: ["Question1",
-                                                              "Question2",
-                                                              "Question3",
-                                                              "Question4",
-                                                              "Question5"], points: [20, 20 , 20, 20, 20], gameRoomColor: .appBluredColor),
-                         GameType(gameTypeID: "3", gameTypeName: "Game 3", gameDetail: "2-4 players",
-                                                  questions: ["Question1",
-                                                              "Question2",
-                                                              "Question3",
-                                                              "Question4",
-                                                              "Question5"], points: [20, 20 , 20, 20, 20], gameRoomColor: .systemGreen),
-                         GameType(gameTypeID: "4", gameTypeName: "Game 4", gameDetail: "2-4 players",
-                                                  questions: ["Question1",
-                                                              "Question2",
-                                                              "Question3",
-                                                              "Question4",
-                                                              "Question5"], points: [20, 20 , 20, 20, 20], gameRoomColor: .systemOrange),
-                         GameType(gameTypeID: "5", gameTypeName: "Game 5", gameDetail: "2-4 players",
-                                                  questions: ["Question1",
-                                                              "Question2",
-                                                              "Question3",
-                                                              "Question4",
-                                                              "Question5"], points: [20, 20 , 20, 20, 20], gameRoomColor: .systemTeal)]
+                                              "Question5"], 
+                                  points: [20, 20 , 20, 20, 20],
+                                  gameRoomColor: .systemYellow,
+                                  gameDesc: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."),
+                         GameType(gameTypeID: "2",
+                                  gameTypeName: "Game 2",
+                                  gameDetail: "2-4 players",
+                                  questions: ["Question1",
+                                              "Question2",
+                                              "Question3",
+                                              "Question4",
+                                              "Question5"],
+                                  points: [20, 20 , 20, 20, 20],
+                                  gameRoomColor: .appBluredColor,
+                                  gameDesc: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."),
+                         GameType(gameTypeID: "3",
+                                  gameTypeName: "Game 3",
+                                  gameDetail: "2-4 players",
+                                  questions: ["Question1",
+                                              "Question2",
+                                              "Question3",
+                                              "Question4",
+                                              "Question5"],
+                                  points: [20, 20 , 20, 20, 20],
+                                  gameRoomColor: .systemGreen,
+                                  gameDesc: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."),
+                         GameType(gameTypeID: "4",
+                                  gameTypeName: "Game 4",
+                                  gameDetail: "2-4 players",
+                                  questions: ["Question1",
+                                              "Question2",
+                                              "Question3",
+                                              "Question4",
+                                              "Question5"], 
+                                  points: [20, 20 , 20, 20, 20],
+                                  gameRoomColor: .systemOrange,
+                                  gameDesc: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."),
+                         GameType(gameTypeID: "5",
+                                  gameTypeName: "Game 5",
+                                  gameDetail: "2-4 players",
+                                  questions: ["Question1",
+                                              "Question2",
+                                              "Question3",
+                                              "Question4",
+                                              "Question5"],
+                                  points: [20, 20 , 20, 20, 20],
+                                  gameRoomColor: .systemTeal,
+                                  gameDesc: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.")]
 
         
         self.comments = [Comments(commentID: "1", 
@@ -170,14 +199,14 @@ class SharedData {
                                   roomType: GameType(gameTypeID: "1",
                                                      gameTypeName: "Game 1",
                                                      gameDetail: "2-4 players",
-                                                                       
                                                      questions: ["Question1",
                                                                "Question2",
                                                                "Question3",
                                                                "Question4",
                                                                "Question5"],
                                                      points: [20, 20 , 20, 20, 20],
-                                                     gameRoomColor: .systemYellow),
+                                                     gameRoomColor: .systemYellow, 
+                                                     gameDesc: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."),
                                   users: gameRoomUsers)]
     
         
@@ -203,7 +232,8 @@ class SharedData {
                                                         "Question6",
                                                         "Question7"],
                                             points: [20, 20 , 20, 20, 20, 20, 20],
-                                            gameRoomColor: .systemYellow),
+                                            gameRoomColor: .systemYellow, 
+                                            gameDesc: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."),
                         gameArray: mission)
     }
 }

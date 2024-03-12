@@ -43,7 +43,7 @@ class GameDetailViewController: UIViewController {
         detailV.backgroundColor = .appWhite
         
         detailL.text = "Game details"
-//        detailTV.text = SharedData.shared.gameType[gameTypeID].gameDesc // TODO: gameDesc to be added
+        detailTV.text = SharedData.shared.gameType[gameTypeID].gameDesc
         
         collectionV.backgroundColor = SharedData.shared.gameType[gameTypeID].gameRoomColor
         
@@ -61,6 +61,7 @@ class GameDetailViewController: UIViewController {
         createGameBtnL.textColor = .appWhite
     }
     
+    // Button funcs
     @IBAction func createGameClicked(_ sender: Any) {
         if let createUserVC = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "CreateUserVC") as? CreateUserViewController {

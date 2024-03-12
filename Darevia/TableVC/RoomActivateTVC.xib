@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -74,7 +73,7 @@
                                         <rect key="frame" x="291.66666666666669" y="0.0" width="63.333333333333314" height="63.333333333333336"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FU1-v5-mc6">
-                                                <rect key="frame" x="15.666666666666631" y="17.666666666666686" width="31.666666666666671" height="27.666666666666671"/>
+                                                <rect key="frame" x="19" y="21" width="25.333333333333329" height="21.333333333333336"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FU1-v5-mc6" secondAttribute="height" id="7iF-S3-J6l"/>
@@ -95,7 +94,7 @@
                                             <constraint firstItem="FU1-v5-mc6" firstAttribute="centerY" secondItem="TVc-zC-x9b" secondAttribute="centerY" id="RiV-PI-ays"/>
                                             <constraint firstItem="mng-Yn-Oqg" firstAttribute="leading" secondItem="TVc-zC-x9b" secondAttribute="leading" id="U2u-1I-k0k"/>
                                             <constraint firstItem="mng-Yn-Oqg" firstAttribute="top" secondItem="TVc-zC-x9b" secondAttribute="top" id="ZoG-sS-pA8"/>
-                                            <constraint firstItem="FU1-v5-mc6" firstAttribute="width" secondItem="TVc-zC-x9b" secondAttribute="width" multiplier="0.5" id="byK-LU-Zqw"/>
+                                            <constraint firstItem="FU1-v5-mc6" firstAttribute="width" secondItem="TVc-zC-x9b" secondAttribute="width" multiplier="0.4" id="byK-LU-Zqw"/>
                                             <constraint firstAttribute="width" secondItem="TVc-zC-x9b" secondAttribute="height" id="mce-ti-4nO"/>
                                         </constraints>
                                     </view>

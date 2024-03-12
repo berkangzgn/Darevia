@@ -7,7 +7,7 @@
 
 import UIKit 
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var topV: UIView!
     @IBOutlet weak var titleL: UILabel!
     @IBOutlet var menuTV: UITableView!
@@ -32,19 +32,12 @@ class MainViewController: UIViewController {
         view.backgroundColor = .appWhite
     }
     
+    // Button funcs
     @objc private func enterCodeButtonClicked() {
-        // TODO: To be edited after api connection
-        let alertController = UIAlertController(title: "App in developed.".localized(), message: "Room check will take place after the API connection. Therefore we redirect you to another page for now.".localized(), preferredStyle: .alert) 
-
-        let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in 
-            if let gameVC = UIStoryboard(name: "Main", bundle: nil)
-                .instantiateViewController(withIdentifier: "GameVC") as? GameViewController {
-                gameVC.modalPresentationStyle = .fullScreen
-                self.present(gameVC, animated: true, completion: nil)
-            }
-        }
-        
-        alertController.addAction(confirmAction)
+            // MARK: Delete this warning, modify this function after the API connection.
+        let alertController = UIAlertController(title: "App in developed.".localized(), message: "Room check will take place after the API connection. Therefore we redirect you to another page for now.".localized(), preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
     
@@ -54,6 +47,19 @@ class MainViewController: UIViewController {
             gameTypeVC.modalPresentationStyle = .fullScreen
             present(gameTypeVC, animated: true, completion: nil)
         }
+    }
+    
+    // After entering 6 characters, automatic orientation function
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            // MARK: Delete this warning, modify this function after the API connection.
+        if ((textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? "").count == 6 {
+            let alertController = UIAlertController(title: "App in developed.".localized(), message: "Room check will take place after the API connection. Therefore we redirect you to another page for now.".localized(), preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+        }
+
+        return true
     }
 }
  
@@ -68,6 +74,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, RoomTy
             
             cell.playNowBtn.addTarget(self, action: #selector(playNowButtonClicked), for: .touchUpInside)
             cell.enterGameBtn.addTarget(self, action: #selector(enterCodeButtonClicked), for: .touchUpInside)
+            cell.enterCodeTF.delegate = self
             return cell
             
         } else if indexPath.row == 1 {

@@ -83,6 +83,7 @@ class ListRoomViewController: UIViewController, ListConfigurable {
         inviteBtn.setTitle("", for: .normal)
         inviteBtn.setTitleColorExt(.appColor)
         
+        // Adjusting the appearance of the page according to the data coming from the protocol
         switch selectedOption {
         case 1: // Waiting
             titleL.text = "DAREVIA"
@@ -139,6 +140,7 @@ class ListRoomViewController: UIViewController, ListConfigurable {
         }
     }
     
+    // Button funcs
     @IBAction func startGameClicked(_ sender: Any) {
         if let gameVC = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "GameVC") as? GameViewController {
@@ -147,6 +149,7 @@ class ListRoomViewController: UIViewController, ListConfigurable {
         }
     }
     
+    // Adjusting the appearance of the page according to the data coming from the protocol
     @IBAction func inviteBtnClicked(_ sender: UIButton) {
         switch selectedOption {
         case 1: // Waiting
@@ -161,12 +164,10 @@ class ListRoomViewController: UIViewController, ListConfigurable {
             SharedData.shared.game.roomUsers.removeLast()
             SharedData.shared.arrayNo = 0
             
-            
             for index in 0..<SharedData.shared.game.roomUsers.count {
                 SharedData.shared.gameRoomUsers[index].score = 0
             }
 
-            
             if let mainVC = UIStoryboard(name: "Main", bundle: nil)
                 .instantiateViewController(withIdentifier: "MainVC") as? MainViewController {
                 mainVC.modalPresentationStyle = .fullScreen
