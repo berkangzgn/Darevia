@@ -337,7 +337,7 @@
                                 <rect key="frame" x="0.0" y="85" width="375" height="582"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgG-Wo-nwj">
-                                        <rect key="frame" x="75" y="20" width="225" height="125"/>
+                                        <rect key="frame" x="75" y="20" width="225" height="140"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ux5-4Z-KhU">
                                                 <rect key="frame" x="8" y="8" width="70" height="70"/>
@@ -506,7 +506,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="SWd-f9-GTL" firstAttribute="top" secondItem="lgG-Wo-nwj" secondAttribute="bottom" constant="20" id="27J-nF-uyX"/>
+                                    <constraint firstItem="SWd-f9-GTL" firstAttribute="top" secondItem="lgG-Wo-nwj" secondAttribute="bottom" constant="5" id="27J-nF-uyX"/>
                                     <constraint firstItem="lgG-Wo-nwj" firstAttribute="top" secondItem="xZB-lT-tMK" secondAttribute="top" constant="20" id="49F-O1-Wry"/>
                                     <constraint firstItem="lgG-Wo-nwj" firstAttribute="centerX" secondItem="xZB-lT-tMK" secondAttribute="centerX" id="9dm-Qq-wAW"/>
                                     <constraint firstItem="8EV-Ck-zw0" firstAttribute="trailing" secondItem="SWd-f9-GTL" secondAttribute="trailing" id="B2j-bP-TZv"/>

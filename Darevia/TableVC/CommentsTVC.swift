@@ -27,8 +27,9 @@ class CommentsTVC: UITableViewCell {
         super.awakeFromNib()
         
         cellTitleL.text = "Comments about the games".localized() 
-        cellTitleL.textColor = .appColor
+        cellTitleL.textColor = .appWhite
         cellTitleL.font = UIFont.boldSystemFont(ofSize: 16)
+        
         commentCV.register(CommentCVC.nib(), forCellWithReuseIdentifier: CommentCVC.identifier)
         commentCV.delegate = self
         commentCV.dataSource = self
@@ -49,7 +50,7 @@ extension CommentsTVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = commentCV.dequeueReusableCell(withReuseIdentifier: CommentCVC.identifier, for: indexPath) as! CommentCVC
         cell.configure(with: comments[indexPath.row])
         cell.applySoftCornerRadius()
-        cell.backgroundColor = .appBluredColor
+        cell.backgroundColor = .appColor
         return cell
     }
     

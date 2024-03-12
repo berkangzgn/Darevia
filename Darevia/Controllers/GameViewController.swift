@@ -72,14 +72,15 @@ class GameViewController: UIViewController {
         watchV.backgroundColor = .appWhite
         watchV.applyTopCornerRadius()
         watchUser1NameL.textColor = .appDark
-        watchUser1NameL.font = .boldSystemFont(ofSize: 17)
+        watchUser1NameL.font = .boldSystemFont(ofSize: 20)
         watchUser2NameL.textColor = .appDark
-        watchUser2NameL.font = .boldSystemFont(ofSize: 17)
+        watchUser2NameL.font = .boldSystemFont(ofSize: 20)
         watchVSL.textColor = .appDark
-        watchVSL.font = .boldSystemFont(ofSize: 20)
+        watchVSL.font = .boldSystemFont(ofSize: 17)
         watchVSL.text = "vs"
-        watchVSL.textColor = .appDark
-        watchVSL.font = .systemFont(ofSize: 20)
+        watchDescL.textColor = .appDark
+        watchDescL.font = .boldSystemFont(ofSize: 17)
+        
         
         // Assign view
         assignV.backgroundColor = .appWhite
@@ -91,17 +92,17 @@ class GameViewController: UIViewController {
         vsL.textColor = .appDark
         vsL.font = .systemFont(ofSize: 17)
         vsL.text = "vs"
-        assignCardV.backgroundColor = .appBluredColor
+        assignCardV.backgroundColor = .appColor
         assignCardV.applySoftCornerRadius()
         assignL.textColor = .appWhite
         assignL.font = .boldSystemFont(ofSize: 17)
-        approveBtnV.backgroundColor = .appBluredColor
+        approveBtnV.backgroundColor = .appColor
         approveBtnV.addBorder(width: 1, color: .appWhite)
         approveBtnV.applyCornerRadius()
         approveL.text = "Done".localized() 
         approveL.textColor =  .appWhite
         approveL.font = UIFont.boldSystemFont(ofSize: 20)
-        rejectBtnV.backgroundColor = .appBluredColor
+        rejectBtnV.backgroundColor = .appColor
         rejectBtnV.addBorder(width: 1, color: .appWhite)
         rejectBtnV.applyCornerRadius()
         rejectL.text = "Fail".localized() 

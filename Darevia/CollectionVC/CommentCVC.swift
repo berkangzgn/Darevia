@@ -19,6 +19,11 @@ class CommentCVC: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        userName.textColor = .appWhite
+        userName.font = .systemFont(ofSize: 17)
+        comment.textColor = .appWhite
+        comment.font = .systemFont(ofSize: 12)
     }
     
     public func configure(with model: Comments) {
